@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" > <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" > <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" > <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="generator" content="pandoc" />
+  <meta name="description" content="Git, GitHub y Markdown" />
+  <meta name="author" content="Adolfo Sanz De Diego" />
+  <title>Git, GitHub y Markdown</title>
+
+  <!-- deck core css -->
+  <link rel="stylesheet" href="../lib/deck.js-master/core/deck.core.css">
+
+  <!-- deck extensions css -->
+  <link rel="stylesheet" href="../lib/deck.js-master/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/extensions/scale/deck.scale.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/extensions/status/deck.status.css">
+
+  <!-- deck slide theme css -->
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/style/swiss.css">
+  <!--
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/style/neon.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/style/swiss.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/style/web-2.0.css">
+  -->
+
+  <!-- deck slide transition css -->
+  <link rel="stylesheet" href="../lib/deck.js-transition-cube-master/cube.css">
+  <!--
+  <link rel="stylesheet" href="../lib/deck.js-transition-cube-master/cube.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/transition/fade.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/transition/horizontal-slide.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/transition/vertical-slide.css">
+  -->
+
+  <!-- custom css just for this page -->
+  <style>
+    figcaption {
+      display: none;
+      visibility:hidden;
+    }
+
+    #titlepage, #documentauthor, #documentdate {
+      text-align: center;
+    }
+
+    #titlepage {
+      font-size: 5.25em;
+      padding-top: 15%;
+    }
+
+    #documentauthor {
+      font-size: 2.25em;
+    }
+
+    #documentdate {
+      font-size: 1.25em;
+    }
+  </style>
+
+  <!-- modernizr deck js  -->
+  <script src="../lib/deck.js-master/modernizr.custom.js"></script>
+
+</head>
+<body class="deck-container">
+<section class="slide">
+  <h2 id="titlepage">Git, GitHub y Markdown</h2>
+  <h3 id="documentauthor">Adolfo Sanz De Diego</h3>
+  <h4 id="documentdate">Octubre 2015</h4>
+</section>
+
+<section id="acerca-de" class="titleslide slide level1"><h1><span class="header-section-number">1</span> Acerca de</h1></section><section id="autor" class="slide level2">
+<h2><span class="header-section-number">1.1</span> Autor</h2>
+<ul>
+<li><strong>Adolfo Sanz De Diego</strong>
+<ul>
+<li>Blog: <a href="http://asanzdiego.blogspot.com.es/">asanzdiego.blogspot.com.es</a></li>
+<li>Correo: <a href="mailto:asanzdiego@gmail.com">asanzdiego@gmail.com</a></li>
+<li>GitHub: <a href="http://github.com/asanzdiego">github.com/asanzdiego</a></li>
+<li>Twitter: <a href="http://twitter.com/asanzdiego">twitter.com/asanzdiego</a></li>
+<li>LinkedIn: <a href="http://www.linkedin.com/in/asanzdiego">in/asanzdiego</a></li>
+<li>SlideShare: <a href="http://www.slideshare.net/asanzdiego/">slideshare.net/asanzdiego</a></li>
+</ul></li>
+</ul>
+</section><section id="licencia" class="slide level2">
+<h2><span class="header-section-number">1.2</span> Licencia</h2>
+<ul>
+<li><strong>Este obra está bajo una licencia:</strong>
+<ul>
+<li><a href="http://creativecommons.org/licenses/by-sa/3.0/es/">Creative Commons Reconocimiento-CompartirIgual 3.0</a></li>
+</ul></li>
+</ul>
+</section><section id="fuente" class="slide level2">
+<h2><span class="header-section-number">1.3</span> Fuente</h2>
+<ul>
+<li>Las slides y sus fuentes las podéis encontrar en:
+<ul>
+<li><a href="https://github.com/asanzdiego/curso-git-github-markdown-2015">https://github.com/asanzdiego/curso-git-github-markdown-2015</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="introducción" class="titleslide slide level1"><h1><span class="header-section-number">2</span> Introducción</h1></section><section id="objetivos" class="slide level2">
+<h2><span class="header-section-number">2.1</span> Objetivos</h2>
+<ol type="1">
+<li>Conocer las <strong>características de Git</strong> y ser capaz de instalar y configurarlo.</li>
+<li>Conocer y ser capaz de usar los <strong>comandos de Git</strong>.</li>
+<li>Conocer las <strong>características de GitHub</strong> y ser capaz de crear una cuenta y configurarla.</li>
+<li>Ser capaz de <strong>crear y clonar repositorios</strong> en GitHub.</li>
+<li>Conocer y ser capaz de <strong>usar las principales características de GitHub</strong>.</li>
+<li>Conocer la <strong>sintaxis del lenguaje Markdown</strong>.</li>
+</ol>
+</section><section id="indice" class="slide level2">
+<h2><span class="header-section-number">2.2</span> Indice</h2>
+<ul>
+<li><strong>Bloque 1</strong>
+<ul>
+<li>Introducción a Git</li>
+<li>Introducción a GitHub</li>
+<li>Introducción Markdown</li>
+</ul></li>
+<li><strong>Bloque 2</strong>
+<ul>
+<li>Uso básico de Git</li>
+<li>Uso básico de GitHub</li>
+<li>Sintaxis básica de Markdown</li>
+</ul></li>
+<li><strong>Bloque 3</strong>
+<ul>
+<li>Uso avanzado de Git</li>
+<li>Uso avanzado de GitHub</li>
+<li>Sintaxis avanzada de Markdown</li>
+</ul></li>
+</ul>
+</section><section id="enlaces-de-interés" class="slide level2">
+<h2><span class="header-section-number">2.3</span> Enlaces de interés</h2>
+<ul>
+<li>Aprender GIT... y de camino GitHub:
+<ul>
+<li><a href="https://github.com/oslugr/curso-git">https://github.com/oslugr/curso-git</a></li>
+</ul></li>
+<li>Página oficial de Git:
+<ul>
+<li><a href="https://git-scm.com/">https://git-scm.com/</a></li>
+</ul></li>
+<li>Pro GIT:
+<ul>
+<li><a href="https://git-scm.com/book/es/v2">https://git-scm.com/book/es/v2</a></li>
+</ul></li>
+<li>Minitutorial de GIT:
+<ul>
+<li><a href="https://try.github.io/">https://try.github.io/</a></li>
+</ul></li>
+<li>Página oficial de GitHub:
+<ul>
+<li><a href="https://github.com/">https://github.com/</a></li>
+</ul></li>
+<li>Chuleta de la sintaxis de Markdown:
+<ul>
+<li><a href="http://warpedvisions.org/projects/markdown-cheat-sheet">http://warpedvisions.org/projects/markdown-cheat-sheet</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="introducción-a-git" class="titleslide slide level1"><h1><span class="header-section-number">3</span> Introducción a Git</h1></section><section id="sistema-control-de-versiones" class="slide level2">
+<h2><span class="header-section-number">3.1</span> Sistema Control de Versiones</h2>
+<blockquote>
+<p>&quot;Sistema que registra los cambios realizados sobre un archivo o conjunto de archivos a lo largo del tiempo, de modo que puedas recuperar versiones específicas más adelante.&quot;</p>
+</blockquote>
+<p><a href="https://git-scm.com/book/es/v1/Empezando-Acerca-del-control-de-versiones">https://git-scm.com/book/es/v1/Empezando-Acerca-del-control-de-versiones</a></p>
+</section><section id="vcs-locales" class="slide level2">
+<h2><span class="header-section-number">3.2</span> VCS Locales</h2>
+<ul>
+<li><p><strong>Lo más simple</strong>: hacer copias de directorios.</p></li>
+<li><p>Aparecieron <strong>BD en local</strong> que guardan el registro de los cambios realizados a los archivos.</p></li>
+</ul>
+</section><section id="vcs-centralizados" class="slide level2">
+<h2><span class="header-section-number">3.3</span> VCS Centralizados</h2>
+<ul>
+<li>Un <strong>servidor central</strong> que guarda los cambios.</li>
+</ul>
+<figure>
+<img src="../img/vcs-centralizado-bis.png" alt="VCS Centralizado" /><figcaption>VCS Centralizado</figcaption>
+</figure>
+</section><section id="pros-y-contras-vcs-centralizados" class="slide level2">
+<h2><span class="header-section-number">3.4</span> Pros y Contras VCS Centralizados</h2>
+<ul>
+<li><p><strong>Pros</strong>: más colaborativo que el local.</p></li>
+<li><p><strong>Contras</strong>: dependes de un servidor central.</p></li>
+</ul>
+</section><section id="vcs-distribuidos" class="slide level2">
+<h2><span class="header-section-number">3.5</span> VCS Distribuidos</h2>
+<ul>
+<li>Cada cliente <strong>no solo descarga la última copia, sino todo el repositorio</strong>.</li>
+</ul>
+<figure>
+<img src="../img/vcs-distribuido-bis.png" alt="VCS Distribuido" /><figcaption>VCS Distribuido</figcaption>
+</figure>
+</section><section id="ventajes-vcs-distribuidos" class="slide level2">
+<h2><span class="header-section-number">3.6</span> Ventajes VCS Distribuidos</h2>
+<ul>
+<li>Puedes seguir trabajando aunque el repositorio remoto esté caido.
+<ul>
+<li><strong>más autonomía</strong></li>
+</ul></li>
+<li>La información está más replicada.
+<ul>
+<li><strong>menos vulnerable</strong></li>
+</ul></li>
+<li>Permite pruebas en local y subir solo lo relevante.
+<ul>
+<li><strong>más limpieza</strong></li>
+</ul></li>
+</ul>
+</section><section id="características-de-git" class="slide level2">
+<h2><span class="header-section-number">3.7</span> Características de Git</h2>
+<ul>
+<li><p>Creado por Linux Torvalds, líder del equipo del kernel Linux.</p></li>
+<li>Objetivos cuando se creó:
+<ul>
+<li><strong>Rápido</strong></li>
+<li><strong>Sencillo</strong></li>
+<li><strong>Multi rama</strong></li>
+<li><strong>Distribuido</strong></li>
+<li><strong>Grandes proyectos</strong></li>
+</ul></li>
+</ul>
+</section><section id="instalación" class="slide level2">
+<h2><span class="header-section-number">3.8</span> Instalación</h2>
+<ul>
+<li><p>Windows: <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p></li>
+<li><p>Mac: <a href="https://git-scm.com/download/mac">https://git-scm.com/download/mac</a></p></li>
+<li><p>Linux: <a href="https://git-scm.com/download/linux">https://git-scm.com/download/linux</a></p></li>
+</ul>
+</section><section id="configuración-inicial" class="slide level2">
+<h2><span class="header-section-number">3.9</span> Configuración inicial</h2>
+<pre><code>git config --global user.name &quot;Nombre que quieras mostrar&quot;</code></pre>
+<pre><code>git config --global user.email &quot;correo@electronico.es&quot;</code></pre>
+</section>
+<section id="introducción-a-github" class="titleslide slide level1"><h1><span class="header-section-number">4</span> Introducción a GitHub</h1></section><section id="características-de-github" class="slide level2">
+<h2><span class="header-section-number">4.1</span> Características de GitHub</h2>
+<ul>
+<li><p><strong>Plataforma de desarrollo colaborativo</strong>, que utiliza Git.</p></li>
+<li><p>Los <strong>repositorios son públicos</strong>, salvo con cuenta de pago.</p></li>
+<li><p>Tiene facetas de <strong>red social</strong> (perfil público, seguidores, estrellas, etc.)</p></li>
+<li><p>Nos permite <strong>gestionar organizaciones y equipos</strong>.</p></li>
+<li><p><strong>Gestión de proyectos</strong> (wiki, releases, incidencias, gráficos, etc.)</p></li>
+<li><p><strong>Servidor web</strong>.</p></li>
+</ul>
+</section><section id="crear-cuenta" class="slide level2">
+<h2><span class="header-section-number">4.2</span> Crear cuenta</h2>
+<figure>
+<img src="../img/github-signup.png" alt="Crear cuenta en GitHub" /><figcaption>Crear cuenta en GitHub</figcaption>
+</figure>
+</section><section id="crear-repositorio" class="slide level2">
+<h2><span class="header-section-number">4.3</span> Crear repositorio</h2>
+<figure>
+<img src="../img/github-new-repo.png" alt="Crear un repositorio" /><figcaption>Crear un repositorio</figcaption>
+</figure>
+</section>
+<section id="introducción-markdown" class="titleslide slide level1"><h1><span class="header-section-number">5</span> Introducción Markdown</h1></section><section id="qué-es-markdown" class="slide level2">
+<h2><span class="header-section-number">5.1</span> Qué es Markdown</h2>
+<blockquote>
+<p>&quot;Es un lenguaje de marcado ligero que trata de conseguir la máxima legibilidad y 'publicabilidad' usando texto plano.&quot;</p>
+</blockquote>
+<p><a href="https://es.wikipedia.org/wiki/Markdown">https://es.wikipedia.org/wiki/Markdown</a></p>
+</section><section id="características-principales" class="slide level2">
+<h2><span class="header-section-number">5.2</span> Características principales</h2>
+<ul>
+<li>Texto plano</li>
+<li>Sintaxis sencilla</li>
+<li>Legibilidad</li>
+<li>Publicabilidad</li>
+<li>Exportabiliad</li>
+</ul>
+</section><section id="editor-online" class="slide level2">
+<h2><span class="header-section-number">5.3</span> Editor online</h2>
+<ul>
+<li><a href="https://jbt.github.io/markdown-editor/">https://jbt.github.io/markdown-editor/</a></li>
+</ul>
+</section><section id="chuleta-de-markdown" class="slide level2">
+<h2><span class="header-section-number">5.4</span> Chuleta de Markdown:</h2>
+<ul>
+<li><a href="http://warpedvisions.org/projects/markdown-cheat-sheet">http://warpedvisions.org/projects/markdown-cheat-sheet</a></li>
+</ul>
+</section><section id="mardownslides" class="slide level2">
+<h2><span class="header-section-number">5.5</span> Mardownslides</h2>
+<ul>
+<li><a href="https://github.com/asanzdiego/markdownslides">https://github.com/asanzdiego/markdownslides</a></li>
+</ul>
+</section>
+<section id="uso-básico-de-git" class="titleslide slide level1"><h1><span class="header-section-number">6</span> Uso básico de Git</h1></section><section id="init" class="slide level2">
+<h2><span class="header-section-number">6.1</span> init</h2>
+<ul>
+<li><p><strong>Inicializar</strong> un repositorio.</p></li>
+<li><p>Crea el subdirectorio .git con archivos de git par agestionar repositorio.</p></li>
+</ul>
+<pre><code>git init</code></pre>
+</section><section id="staging-area" class="slide level2">
+<h2><span class="header-section-number">6.2</span> staging area</h2>
+<figure>
+<img src="../img/git-staging-area-bis.png" alt="Staging Area" /><figcaption>Staging Area</figcaption>
+</figure>
+</section><section id="status" class="slide level2">
+<h2><span class="header-section-number">6.3</span> status</h2>
+<ul>
+<li>Para saber el <strong>estado</strong> de los archivos.</li>
+</ul>
+<pre><code>git status</code></pre>
+</section><section id="diff" class="slide level2">
+<h2><span class="header-section-number">6.4</span> diff</h2>
+<ul>
+<li>Para ver las <strong>diferencias</strong> entre el área de staging y el área de trabajo.</li>
+</ul>
+<pre><code>git diff</code></pre>
+</section><section id="add" class="slide level2">
+<h2><span class="header-section-number">6.5</span> add</h2>
+<ul>
+<li>Para <strong>añadir</strong> los cambios de un fichero (o varios) al área de staging (desde el área de trabajo).</li>
+</ul>
+<pre><code>git add nombre-del-fichero</code></pre>
+<pre><code>git add *.extension</code></pre>
+</section><section id="reset" class="slide level2">
+<h2><span class="header-section-number">6.6</span> reset</h2>
+<ul>
+<li>Para <strong>resetear</strong> los cambios de un fichero (o varios) al area de trabajo (desde el area de staging).</li>
+</ul>
+<pre><code>git reset nombre-del-fichero</code></pre>
+</section><section id="commit" class="slide level2">
+<h2><span class="header-section-number">6.7</span> commit</h2>
+<ul>
+<li>Para <strong>subir</strong> los cambios realizados al repositorio (desde el área de staging).</li>
+</ul>
+<pre><code>git commit -m &quot;mensaje corto descriptivo con los cambios&quot;</code></pre>
+</section><section id="checkout" class="slide level2">
+<h2><span class="header-section-number">6.8</span> checkout</h2>
+<ul>
+<li>Para <strong>deshacer</strong> los cambios de un fichero (o varios) al area de staging (desde el repositorio).</li>
+</ul>
+<pre><code>git checkout nombre-del-fichero</code></pre>
+</section><section id="log" class="slide level2">
+<h2><span class="header-section-number">6.9</span> log</h2>
+<ul>
+<li>Para ver el <strong>listado de los commits</strong> realizados en el repositorio.</li>
+</ul>
+<pre><code>git log</code></pre>
+</section>
+<section id="uso-básico-de-github" class="titleslide slide level1"><h1><span class="header-section-number">7</span> Uso básico de GitHub</h1></section><section id="configurar-claves-i" class="slide level2">
+<h2><span class="header-section-number">7.1</span> Configurar claves (I)</h2>
+<ul>
+<li><p>Nos permite gestionar repositorios <strong>mediante SSH</strong> sin tener que estar poniendo siempre nuestra constraseña.</p></li>
+<li><p>Se genera una <strong>clave privada</strong> que se guarde en nuestro ordenador y una <strong>clave pública</strong> que es la que tenemos que guardar en nuestra cuenta.</p></li>
+</ul>
+</section><section id="configurar-claves-ii" class="slide level2">
+<h2><span class="header-section-number">7.2</span> Configurar claves (II)</h2>
+<ul>
+<li><p>La podemos usar pues <strong>solo con un ordenador</strong>.</p></li>
+<li><p>Instrucciones:</p>
+<ul>
+<li><a href="https://help.github.com/articles/generating-ssh-keys/">https://help.github.com/articles/generating-ssh-keys/</a></li>
+</ul></li>
+</ul>
+</section><section id="clonar-repositorios" class="slide level2">
+<h2><span class="header-section-number">7.3</span> Clonar repositorios</h2>
+<ul>
+<li>Además de con git init, podemos empezar a trabajar con reposiorios clonandolos:</li>
+</ul>
+<pre><code>git clone git@github.com:asanzdiego/markdownslides.git</code></pre>
+</section><section id="uso-social" class="slide level2">
+<h2><span class="header-section-number">7.4</span> Uso social</h2>
+<ul>
+<li>Seguir a gente.</li>
+<li>Seguir proyectos (watch).</li>
+<li>Premiar proyectos (start).</li>
+<li>Forquear proyectos (fork).</li>
+<li>Pull-requests.</li>
+<li>Issues.</li>
+<li>Crear organizaciones.</li>
+</ul>
+</section>
+<section id="sintaxis-básica-de-markdown" class="titleslide slide level1"><h1><span class="header-section-number">8</span> Sintaxis básica de Markdown</h1></section><section id="encabezados-i" class="slide level2">
+<h2><span class="header-section-number">8.1</span> Encabezados (I)</h2>
+<ul>
+<li><code>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;</code></li>
+</ul>
+<pre><code># Encabezado de primer nivel
+
+## Encabezado de segundo nivel
+
+### Encabezado de tercer nivel</code></pre>
+</section><section id="encabezados-ii" class="slide level2">
+<h2><span class="header-section-number">8.2</span> Encabezados (II)</h2>
+<ul>
+<li>Equivalente a lo anterior.</li>
+</ul>
+<pre><code>Encabezado de primer nivel
+==========================
+
+Encabezado de segundo nivel
+---------------------------
+
+### Encabezado de tercer nivel ###</code></pre>
+</section><section id="listas-no-numeradas" class="slide level2">
+<h2><span class="header-section-number">8.3</span> Listas no numeradas</h2>
+<ul>
+<li>No enumeradas:
+<ul>
+<li>se puede usar el asterísico</li>
+<li>se puede usar el menos</li>
+<li>se puede usar el más</li>
+</ul></li>
+</ul>
+<pre><code>* se puede usar el asterísico
+- se puede usar el menos
++ se puede usar el más</code></pre>
+</section><section id="listas-no-numeradas-1" class="slide level2">
+<h2><span class="header-section-number">8.4</span> Listas no numeradas</h2>
+<ul>
+<li>Enumeradas:
+<ol type="1">
+<li>Primer elemento</li>
+<li>Segundo elemento</li>
+<li>Tercer elemento</li>
+</ol></li>
+</ul>
+<pre><code>1. Primer elemento
+1. Segundo elemento
+1. Tercer elemento</code></pre>
+</section><section id="formato-negrita-cursiva-subrayado-tachado" class="slide level2">
+<h2><span class="header-section-number">8.5</span> formato (negrita, cursiva, subrayado, tachado)</h2>
+<ul>
+<li>Texto en cursiva con <em>un asterisco</em> o con <em>un guión bajo</em>.</li>
+<li>Texto en negrita con <strong>dos asteriscos</strong> o con <strong>dos guiones bajos</strong>.</li>
+<li>Texto <del>tachado</del>.</li>
+</ul>
+<pre><code>- Texto en cursiva con *un asterisco* o con _un guión bajo_.
+- Texto en negrita con **dos asteriscos** o con __dos guiones bajos__.
+- Texto ~~tachado~~.</code></pre>
+</section>
+<section id="uso-avanzado-de-git" class="titleslide slide level1"><h1><span class="header-section-number">9</span> Uso avanzado de Git</h1></section><section id="gitignore-mv-y-rm" class="slide level2">
+<h2><span class="header-section-number">9.1</span> .gitignore, mv y rm</h2>
+</section><section id="branch-checkout-y-merge" class="slide level2">
+<h2><span class="header-section-number">9.2</span> branch, checkout y merge</h2>
+</section><section id="rebase-status-y-diff" class="slide level2">
+<h2><span class="header-section-number">9.3</span> rebase, status y diff</h2>
+</section>
+<section id="uso-avanzado-de-github" class="titleslide slide level1"><h1><span class="header-section-number">10</span> Uso avanzado de GitHub</h1></section><section id="gestionar-equipos" class="slide level2">
+<h2><span class="header-section-number">10.1</span> gestionar equipos</h2>
+</section><section id="pull-requests" class="slide level2">
+<h2><span class="header-section-number">10.2</span> pull-requests</h2>
+</section><section id="git-pages" class="slide level2">
+<h2><span class="header-section-number">10.3</span> git-pages</h2>
+</section>
+<section id="sintaxis-avanzados-de-markdown" class="titleslide slide level1"><h1><span class="header-section-number">11</span> Sintaxis avanzados de Markdown</h1></section><section id="ids" class="slide level2">
+<h2><span class="header-section-number">11.1</span> ids</h2>
+</section><section id="tablas" class="slide level2">
+<h2><span class="header-section-number">11.2</span> tablas</h2>
+</section><section id="bloques-citas-código" class="slide level2">
+<h2><span class="header-section-number">11.3</span> bloques (citas, código)</h2>
+</section><section id="enlaces-e-imágenes" class="slide level2">
+<h2><span class="header-section-number">11.4</span> enlaces e imágenes</h2>
+</section>
+
+<!--footer id="footer">
+  <h4 class="author"> Adolfo Sanz De Diego  - Octubre 2015</h4>
+</footer-->
+
+<!-- deck goto extension html -->
+<form action="." method="get" class="goto-form">
+  <label for="goto-slide">Go to slide:</label>
+  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+  <datalist id="goto-datalist"></datalist>
+  <input type="submit" value="Go">
+</form>
+
+<!-- deck navigation extension html -->
+<div aria-role="navigation">
+  <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+  <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+</div>
+
+<!-- deck status extension html -->
+<p class="deck-status" aria-role="status">
+  <span class="deck-status-current"></span>
+  /
+  <span class="deck-status-total"></span>
+</p>
+
+<!-- jquery  -->
+<script src="../lib/deck.js-master/jquery.min.js"></script>
+
+<!-- deck core js  -->
+<script src="../lib/deck.js-master/core/deck.core.js"></script>
+
+<!-- deck extension js -->
+<script src="../lib/deck.js-master/extensions/goto/deck.goto.js"></script>
+<script src="../lib/deck.js-master/extensions/menu/deck.menu.js"></script>
+<script src="../lib/deck.js-master/extensions/navigation/deck.navigation.js"></script>
+<script src="../lib/deck.js-master/extensions/scale/deck.scale.js"></script>
+<script src="../lib/deck.js-master/extensions/status/deck.status.js"></script>
+<!--script src="../lib/deck.search.js-master/search/deck.search.js"></script-->
+
+<!-- Initialize the deck. -->
+<script>
+$(function() {
+    $.deck('.slide');
+});
+</script>
+
+</body>
+</html>

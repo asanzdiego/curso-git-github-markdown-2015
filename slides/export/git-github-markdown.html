@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="description" content="Git, GitHub y Markdown" />
+  <meta name="author" content="Adolfo Sanz De Diego" />
+  <title>Git, GitHub y Markdown</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+<h1 class="title">Git, GitHub y Markdown</h1>
+<h2 class="author">Adolfo Sanz De Diego</h2>
+<h3 class="date">Octubre 2015</h3>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#acerca-de"><span class="toc-section-number">1</span> Acerca de</a><ul>
+<li><a href="#autor"><span class="toc-section-number">1.1</span> Autor</a></li>
+<li><a href="#licencia"><span class="toc-section-number">1.2</span> Licencia</a></li>
+<li><a href="#fuente"><span class="toc-section-number">1.3</span> Fuente</a></li>
+</ul></li>
+<li><a href="#introducción"><span class="toc-section-number">2</span> Introducción</a><ul>
+<li><a href="#objetivos"><span class="toc-section-number">2.1</span> Objetivos</a></li>
+<li><a href="#indice"><span class="toc-section-number">2.2</span> Indice</a></li>
+<li><a href="#enlaces-de-interés"><span class="toc-section-number">2.3</span> Enlaces de interés</a></li>
+</ul></li>
+<li><a href="#introducción-a-git"><span class="toc-section-number">3</span> Introducción a Git</a><ul>
+<li><a href="#sistema-control-de-versiones"><span class="toc-section-number">3.1</span> Sistema Control de Versiones</a></li>
+<li><a href="#vcs-locales"><span class="toc-section-number">3.2</span> VCS Locales</a></li>
+<li><a href="#vcs-centralizados"><span class="toc-section-number">3.3</span> VCS Centralizados</a></li>
+<li><a href="#pros-y-contras-vcs-centralizados"><span class="toc-section-number">3.4</span> Pros y Contras VCS Centralizados</a></li>
+<li><a href="#vcs-distribuidos"><span class="toc-section-number">3.5</span> VCS Distribuidos</a></li>
+<li><a href="#ventajes-vcs-distribuidos"><span class="toc-section-number">3.6</span> Ventajes VCS Distribuidos</a></li>
+<li><a href="#características-de-git"><span class="toc-section-number">3.7</span> Características de Git</a></li>
+<li><a href="#instalación"><span class="toc-section-number">3.8</span> Instalación</a></li>
+<li><a href="#configuración-inicial"><span class="toc-section-number">3.9</span> Configuración inicial</a></li>
+</ul></li>
+<li><a href="#introducción-a-github"><span class="toc-section-number">4</span> Introducción a GitHub</a><ul>
+<li><a href="#características-de-github"><span class="toc-section-number">4.1</span> Características de GitHub</a></li>
+<li><a href="#crear-cuenta"><span class="toc-section-number">4.2</span> Crear cuenta</a></li>
+<li><a href="#crear-repositorio"><span class="toc-section-number">4.3</span> Crear repositorio</a></li>
+</ul></li>
+<li><a href="#introducción-markdown"><span class="toc-section-number">5</span> Introducción Markdown</a><ul>
+<li><a href="#qué-es-markdown"><span class="toc-section-number">5.1</span> Qué es Markdown</a></li>
+<li><a href="#características-principales"><span class="toc-section-number">5.2</span> Características principales</a></li>
+<li><a href="#editor-online"><span class="toc-section-number">5.3</span> Editor online</a></li>
+<li><a href="#chuleta-de-markdown"><span class="toc-section-number">5.4</span> Chuleta de Markdown:</a></li>
+<li><a href="#mardownslides"><span class="toc-section-number">5.5</span> Mardownslides</a></li>
+</ul></li>
+<li><a href="#uso-básico-de-git"><span class="toc-section-number">6</span> Uso básico de Git</a><ul>
+<li><a href="#init"><span class="toc-section-number">6.1</span> init</a></li>
+<li><a href="#staging-area"><span class="toc-section-number">6.2</span> staging area</a></li>
+<li><a href="#status"><span class="toc-section-number">6.3</span> status</a></li>
+<li><a href="#diff"><span class="toc-section-number">6.4</span> diff</a></li>
+<li><a href="#add"><span class="toc-section-number">6.5</span> add</a></li>
+<li><a href="#reset"><span class="toc-section-number">6.6</span> reset</a></li>
+<li><a href="#commit"><span class="toc-section-number">6.7</span> commit</a></li>
+<li><a href="#checkout"><span class="toc-section-number">6.8</span> checkout</a></li>
+<li><a href="#log"><span class="toc-section-number">6.9</span> log</a></li>
+</ul></li>
+<li><a href="#uso-básico-de-github"><span class="toc-section-number">7</span> Uso básico de GitHub</a><ul>
+<li><a href="#configurar-claves"><span class="toc-section-number">7.1</span> Configurar claves</a></li>
+<li><a href="#clonar-repositorios"><span class="toc-section-number">7.2</span> Clonar repositorios</a></li>
+<li><a href="#uso-social"><span class="toc-section-number">7.3</span> Uso social</a></li>
+</ul></li>
+<li><a href="#sintaxis-básica-de-markdown"><span class="toc-section-number">8</span> Sintaxis básica de Markdown</a><ul>
+<li><a href="#encabezados"><span class="toc-section-number">8.1</span> Encabezados</a></li>
+<li><a href="#listas-no-numeradas"><span class="toc-section-number">8.2</span> Listas no numeradas</a></li>
+<li><a href="#listas-no-numeradas-1"><span class="toc-section-number">8.3</span> Listas no numeradas</a></li>
+<li><a href="#formato-negrita-cursiva-subrayado-tachado"><span class="toc-section-number">8.4</span> formato (negrita, cursiva, subrayado, tachado)</a></li>
+</ul></li>
+<li><a href="#uso-avanzado-de-git"><span class="toc-section-number">9</span> Uso avanzado de Git</a><ul>
+<li><a href="#gitignore-mv-y-rm"><span class="toc-section-number">9.1</span> .gitignore, mv y rm</a></li>
+<li><a href="#branch-checkout-y-merge"><span class="toc-section-number">9.2</span> branch, checkout y merge</a></li>
+<li><a href="#rebase-status-y-diff"><span class="toc-section-number">9.3</span> rebase, status y diff</a></li>
+</ul></li>
+<li><a href="#uso-avanzado-de-github"><span class="toc-section-number">10</span> Uso avanzado de GitHub</a><ul>
+<li><a href="#gestionar-equipos"><span class="toc-section-number">10.1</span> gestionar equipos</a></li>
+<li><a href="#pull-requests"><span class="toc-section-number">10.2</span> pull-requests</a></li>
+<li><a href="#git-pages"><span class="toc-section-number">10.3</span> git-pages</a></li>
+</ul></li>
+<li><a href="#sintaxis-avanzados-de-markdown"><span class="toc-section-number">11</span> Sintaxis avanzados de Markdown</a><ul>
+<li><a href="#ids"><span class="toc-section-number">11.1</span> ids</a></li>
+<li><a href="#tablas"><span class="toc-section-number">11.2</span> tablas</a></li>
+<li><a href="#bloques-citas-código"><span class="toc-section-number">11.3</span> bloques (citas, código)</a></li>
+<li><a href="#enlaces-e-imágenes"><span class="toc-section-number">11.4</span> enlaces e imágenes</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="acerca-de"><span class="header-section-number">1</span> Acerca de</h1>
+<h2 id="autor"><span class="header-section-number">1.1</span> Autor</h2>
+<p><strong>Adolfo Sanz De Diego</strong></p>
+<ul>
+<li><p>Blog: <a href="http://asanzdiego.blogspot.com.es/">asanzdiego.blogspot.com.es</a></p></li>
+<li><p>Correo: <a href="mailto:asanzdiego@gmail.com">asanzdiego@gmail.com</a></p></li>
+<li><p>GitHub: <a href="http://github.com/asanzdiego">github.com/asanzdiego</a></p></li>
+<li><p>Twitter: <a href="http://twitter.com/asanzdiego">twitter.com/asanzdiego</a></p></li>
+<li><p>LinkedIn: <a href="http://www.linkedin.com/in/asanzdiego">in/asanzdiego</a></p></li>
+<li><p>SlideShare: <a href="http://www.slideshare.net/asanzdiego/">slideshare.net/asanzdiego</a></p></li>
+</ul>
+<h2 id="licencia"><span class="header-section-number">1.2</span> Licencia</h2>
+<p><strong>Este obra está bajo una licencia:</strong></p>
+<ul>
+<li><a href="http://creativecommons.org/licenses/by-sa/3.0/es/">Creative Commons Reconocimiento-CompartirIgual 3.0</a></li>
+</ul>
+<h2 id="fuente"><span class="header-section-number">1.3</span> Fuente</h2>
+<p>Las slides y sus fuentes las podéis encontrar en:</p>
+<ul>
+<li><a href="https://github.com/asanzdiego/curso-git-github-markdown-2015">https://github.com/asanzdiego/curso-git-github-markdown-2015</a></li>
+</ul>
+<h1 id="introducción"><span class="header-section-number">2</span> Introducción</h1>
+<h2 id="objetivos"><span class="header-section-number">2.1</span> Objetivos</h2>
+<ol type="1">
+<li>Conocer las <strong>características de Git</strong> y ser capaz de instalar y configurarlo.</li>
+<li>Conocer y ser capaz de usar los <strong>comandos de Git</strong>.</li>
+<li>Conocer las <strong>características de GitHub</strong> y ser capaz de crear una cuenta y configurarla.</li>
+<li>Ser capaz de <strong>crear y clonar repositorios</strong> en GitHub.</li>
+<li>Conocer y ser capaz de <strong>usar las principales características de GitHub</strong>.</li>
+<li>Conocer la <strong>sintaxis del lenguaje Markdown</strong>.</li>
+</ol>
+<h2 id="indice"><span class="header-section-number">2.2</span> Indice</h2>
+<p><strong>Bloque 1</strong></p>
+<ul>
+<li><p>Introducción a Git</p></li>
+<li><p>Introducción a GitHub</p></li>
+<li><p>Introducción Markdown</p></li>
+</ul>
+<p><strong>Bloque 2</strong></p>
+<ul>
+<li><p>Uso básico de Git</p></li>
+<li><p>Uso básico de GitHub</p></li>
+<li><p>Sintaxis básica de Markdown</p></li>
+</ul>
+<p><strong>Bloque 3</strong></p>
+<ul>
+<li><p>Uso avanzado de Git</p></li>
+<li><p>Uso avanzado de GitHub</p></li>
+<li><p>Sintaxis avanzada de Markdown</p></li>
+</ul>
+<h2 id="enlaces-de-interés"><span class="header-section-number">2.3</span> Enlaces de interés</h2>
+<p>Aprender GIT... y de camino GitHub:</p>
+<ul>
+<li><a href="https://github.com/oslugr/curso-git">https://github.com/oslugr/curso-git</a></li>
+</ul>
+<p>Página oficial de Git:</p>
+<ul>
+<li><a href="https://git-scm.com/">https://git-scm.com/</a></li>
+</ul>
+<p>Pro GIT:</p>
+<ul>
+<li><a href="https://git-scm.com/book/es/v2">https://git-scm.com/book/es/v2</a></li>
+</ul>
+<p>Minitutorial de GIT:</p>
+<ul>
+<li><a href="https://try.github.io/">https://try.github.io/</a></li>
+</ul>
+<p>Página oficial de GitHub:</p>
+<ul>
+<li><a href="https://github.com/">https://github.com/</a></li>
+</ul>
+<p>Chuleta de la sintaxis de Markdown:</p>
+<ul>
+<li><a href="http://warpedvisions.org/projects/markdown-cheat-sheet">http://warpedvisions.org/projects/markdown-cheat-sheet</a></li>
+</ul>
+<h1 id="introducción-a-git"><span class="header-section-number">3</span> Introducción a Git</h1>
+<h2 id="sistema-control-de-versiones"><span class="header-section-number">3.1</span> Sistema Control de Versiones</h2>
+<blockquote>
+<p>&quot;Sistema que registra los cambios realizados sobre un archivo o conjunto de archivos a lo largo del tiempo, de modo que puedas recuperar versiones específicas más adelante.&quot;</p>
+</blockquote>
+<p><a href="https://git-scm.com/book/es/v1/Empezando-Acerca-del-control-de-versiones">https://git-scm.com/book/es/v1/Empezando-Acerca-del-control-de-versiones</a></p>
+<h2 id="vcs-locales"><span class="header-section-number">3.2</span> VCS Locales</h2>
+<p><strong>Lo más simple</strong>: hacer copias de directorios.</p>
+<p>Aparecieron <strong>BD en local</strong> que guardan el registro de los cambios realizados a los archivos.</p>
+<h2 id="vcs-centralizados"><span class="header-section-number">3.3</span> VCS Centralizados</h2>
+<p>Un <strong>servidor central</strong> que guarda los cambios.</p>
+<div style="text-align:center">
+<img src="../img/vcs-centralizado-bis.png" alt="VCS Centralizado" />
+</div>
+<h2 id="pros-y-contras-vcs-centralizados"><span class="header-section-number">3.4</span> Pros y Contras VCS Centralizados</h2>
+<p><strong>Pros</strong>: más colaborativo que el local.</p>
+<p><strong>Contras</strong>: dependes de un servidor central.</p>
+<h2 id="vcs-distribuidos"><span class="header-section-number">3.5</span> VCS Distribuidos</h2>
+<p>Cada cliente <strong>no solo descarga la última copia, sino todo el repositorio</strong>.</p>
+<div style="text-align:center">
+<img src="../img/vcs-distribuido-bis.png" alt="VCS Distribuido" />
+</div>
+<h2 id="ventajes-vcs-distribuidos"><span class="header-section-number">3.6</span> Ventajes VCS Distribuidos</h2>
+<p>Puedes seguir trabajando aunque el repositorio remoto esté caido.</p>
+<ul>
+<li><strong>más autonomía</strong></li>
+</ul>
+<p>La información está más replicada.</p>
+<ul>
+<li><strong>menos vulnerable</strong></li>
+</ul>
+<p>Permite pruebas en local y subir solo lo relevante.</p>
+<ul>
+<li><strong>más limpieza</strong></li>
+</ul>
+<h2 id="características-de-git"><span class="header-section-number">3.7</span> Características de Git</h2>
+<p>Creado por Linux Torvalds, líder del equipo del kernel Linux.</p>
+<p>Objetivos cuando se creó:</p>
+<ul>
+<li><p><strong>Rápido</strong></p></li>
+<li><p><strong>Sencillo</strong></p></li>
+<li><p><strong>Multi rama</strong></p></li>
+<li><p><strong>Distribuido</strong></p></li>
+<li><p><strong>Grandes proyectos</strong></p></li>
+</ul>
+<h2 id="instalación"><span class="header-section-number">3.8</span> Instalación</h2>
+<p>Windows: <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p>
+<p>Mac: <a href="https://git-scm.com/download/mac">https://git-scm.com/download/mac</a></p>
+<p>Linux: <a href="https://git-scm.com/download/linux">https://git-scm.com/download/linux</a></p>
+<h2 id="configuración-inicial"><span class="header-section-number">3.9</span> Configuración inicial</h2>
+<pre><code>git config --global user.name &quot;Nombre que quieras mostrar&quot;</code></pre>
+<pre><code>git config --global user.email &quot;correo@electronico.es&quot;</code></pre>
+<h1 id="introducción-a-github"><span class="header-section-number">4</span> Introducción a GitHub</h1>
+<h2 id="características-de-github"><span class="header-section-number">4.1</span> Características de GitHub</h2>
+<p><strong>Plataforma de desarrollo colaborativo</strong>, que utiliza Git.</p>
+<p>Los <strong>repositorios son públicos</strong>, salvo con cuenta de pago.</p>
+<p>Tiene facetas de <strong>red social</strong> (perfil público, seguidores, estrellas, etc.)</p>
+<p>Nos permite <strong>gestionar organizaciones y equipos</strong>.</p>
+<p><strong>Gestión de proyectos</strong> (wiki, releases, incidencias, gráficos, etc.)</p>
+<p><strong>Servidor web</strong>.</p>
+<h2 id="crear-cuenta"><span class="header-section-number">4.2</span> Crear cuenta</h2>
+<div style="text-align:center">
+<img src="../img/github-signup.png" alt="Crear cuenta en GitHub" />
+</div>
+<h2 id="crear-repositorio"><span class="header-section-number">4.3</span> Crear repositorio</h2>
+<div style="text-align:center">
+<img src="../img/github-new-repo.png" alt="Crear un repositorio" />
+</div>
+<h1 id="introducción-markdown"><span class="header-section-number">5</span> Introducción Markdown</h1>
+<h2 id="qué-es-markdown"><span class="header-section-number">5.1</span> Qué es Markdown</h2>
+<blockquote>
+<p>&quot;Es un lenguaje de marcado ligero que trata de conseguir la máxima legibilidad y 'publicabilidad' usando texto plano.&quot;</p>
+</blockquote>
+<p><a href="https://es.wikipedia.org/wiki/Markdown">https://es.wikipedia.org/wiki/Markdown</a></p>
+<h2 id="características-principales"><span class="header-section-number">5.2</span> Características principales</h2>
+<p>Texto plano</p>
+<p>Sintaxis sencilla</p>
+<p>Legibilidad</p>
+<p>Publicabilidad</p>
+<p>Exportabiliad</p>
+<h2 id="editor-online"><span class="header-section-number">5.3</span> Editor online</h2>
+<p><a href="https://jbt.github.io/markdown-editor/">https://jbt.github.io/markdown-editor/</a></p>
+<h2 id="chuleta-de-markdown"><span class="header-section-number">5.4</span> Chuleta de Markdown:</h2>
+<p><a href="http://warpedvisions.org/projects/markdown-cheat-sheet">http://warpedvisions.org/projects/markdown-cheat-sheet</a></p>
+<h2 id="mardownslides"><span class="header-section-number">5.5</span> Mardownslides</h2>
+<p><a href="https://github.com/asanzdiego/markdownslides">https://github.com/asanzdiego/markdownslides</a></p>
+<h1 id="uso-básico-de-git"><span class="header-section-number">6</span> Uso básico de Git</h1>
+<h2 id="init"><span class="header-section-number">6.1</span> init</h2>
+<p><strong>Inicializar</strong> un repositorio.</p>
+<p>Crea el subdirectorio .git con archivos de git par agestionar repositorio.</p>
+<pre><code>git init</code></pre>
+<h2 id="staging-area"><span class="header-section-number">6.2</span> staging area</h2>
+<div style="text-align:center">
+<img src="../img/git-staging-area-bis.png" alt="Staging Area" />
+</div>
+<h2 id="status"><span class="header-section-number">6.3</span> status</h2>
+<p>Para saber el <strong>estado</strong> de los archivos.</p>
+<pre><code>git status</code></pre>
+<h2 id="diff"><span class="header-section-number">6.4</span> diff</h2>
+<p>Para ver las <strong>diferencias</strong> entre el área de staging y el área de trabajo.</p>
+<pre><code>git diff</code></pre>
+<h2 id="add"><span class="header-section-number">6.5</span> add</h2>
+<p>Para <strong>añadir</strong> los cambios de un fichero (o varios) al área de staging (desde el área de trabajo).</p>
+<pre><code>git add nombre-del-fichero</code></pre>
+<pre><code>git add *.extension</code></pre>
+<h2 id="reset"><span class="header-section-number">6.6</span> reset</h2>
+<p>Para <strong>resetear</strong> los cambios de un fichero (o varios) al area de trabajo (desde el area de staging).</p>
+<pre><code>git reset nombre-del-fichero</code></pre>
+<h2 id="commit"><span class="header-section-number">6.7</span> commit</h2>
+<p>Para <strong>subir</strong> los cambios realizados al repositorio (desde el área de staging).</p>
+<pre><code>git commit -m &quot;mensaje corto descriptivo con los cambios&quot;</code></pre>
+<h2 id="checkout"><span class="header-section-number">6.8</span> checkout</h2>
+<p>Para <strong>deshacer</strong> los cambios de un fichero (o varios) al area de staging (desde el repositorio).</p>
+<pre><code>git checkout nombre-del-fichero</code></pre>
+<h2 id="log"><span class="header-section-number">6.9</span> log</h2>
+<p>Para ver el <strong>listado de los commits</strong> realizados en el repositorio.</p>
+<pre><code>git log</code></pre>
+<h1 id="uso-básico-de-github"><span class="header-section-number">7</span> Uso básico de GitHub</h1>
+<h2 id="configurar-claves"><span class="header-section-number">7.1</span> Configurar claves</h2>
+<p>Nos permite gestionar repositorios <strong>mediante SSH</strong> sin tener que estar poniendo siempre nuestra constraseña.</p>
+<p>Se genera una <strong>clave privada</strong> que se guarde en nuestro ordenador y una <strong>clave pública</strong> que es la que tenemos que guardar en nuestra cuenta.</p>
+<p>La podemos usar pues <strong>solo con un ordenador</strong>.</p>
+<p>Instrucciones:</p>
+<ul>
+<li><a href="https://help.github.com/articles/generating-ssh-keys/">https://help.github.com/articles/generating-ssh-keys/</a></li>
+</ul>
+<h2 id="clonar-repositorios"><span class="header-section-number">7.2</span> Clonar repositorios</h2>
+<p>Además de con git init, podemos empezar a trabajar con reposiorios clonandolos:</p>
+<pre><code>git clone git@github.com:asanzdiego/markdownslides.git</code></pre>
+<h2 id="uso-social"><span class="header-section-number">7.3</span> Uso social</h2>
+<p>Seguir a gente.</p>
+<p>Seguir proyectos (watch).</p>
+<p>Premiar proyectos (start).</p>
+<p>Forquear proyectos (fork).</p>
+<p>Pull-requests.</p>
+<p>Issues.</p>
+<p>Crear organizaciones.</p>
+<h1 id="sintaxis-básica-de-markdown"><span class="header-section-number">8</span> Sintaxis básica de Markdown</h1>
+<h2 id="encabezados"><span class="header-section-number">8.1</span> Encabezados</h2>
+<p><code>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;</code></p>
+<pre><code># Encabezado de primer nivel
+
+## Encabezado de segundo nivel
+
+##\# Encabezado de tercer nivel</code></pre>
+<p>Equivalente a lo anterior.</p>
+<pre><code>Encabezado de primer nivel
+==========================
+
+Encabezado de segundo nivel
+
+- -------------------------
+
+##\# Encabezado de tercer nivel ##\#</code></pre>
+<h2 id="listas-no-numeradas"><span class="header-section-number">8.2</span> Listas no numeradas</h2>
+<p>No enumeradas: * se puede usar el asterísico</p>
+<ul>
+<li>se puede usar el menos
+<ul>
+<li>se puede usar el más</li>
+</ul></li>
+</ul>
+<pre><code>* se puede usar el asterísico
+
+se puede usar el menos
++ se puede usar el más</code></pre>
+<h2 id="listas-no-numeradas-1"><span class="header-section-number">8.3</span> Listas no numeradas</h2>
+<p>Enumeradas: 1. Primer elemento 1. Segundo elemento 1. Tercer elemento</p>
+<pre><code>1. Primer elemento
+1. Segundo elemento
+1. Tercer elemento</code></pre>
+<h2 id="formato-negrita-cursiva-subrayado-tachado"><span class="header-section-number">8.4</span> formato (negrita, cursiva, subrayado, tachado)</h2>
+<p>Texto en cursiva con <em>un asterisco</em> o con <em>un guión bajo</em>.</p>
+<p>Texto en negrita con <strong>dos asteriscos</strong> o con <strong>dos guiones bajos</strong>.</p>
+<p>Texto <del>tachado</del>.</p>
+<pre><code>
+Texto en cursiva con *un asterisco* o con _un guión bajo_.
+
+Texto en negrita con **dos asteriscos** o con __dos guiones bajos__.
+
+Texto ~~tachado~~.</code></pre>
+<h1 id="uso-avanzado-de-git"><span class="header-section-number">9</span> Uso avanzado de Git</h1>
+<h2 id="gitignore-mv-y-rm"><span class="header-section-number">9.1</span> .gitignore, mv y rm</h2>
+<h2 id="branch-checkout-y-merge"><span class="header-section-number">9.2</span> branch, checkout y merge</h2>
+<h2 id="rebase-status-y-diff"><span class="header-section-number">9.3</span> rebase, status y diff</h2>
+<h1 id="uso-avanzado-de-github"><span class="header-section-number">10</span> Uso avanzado de GitHub</h1>
+<h2 id="gestionar-equipos"><span class="header-section-number">10.1</span> gestionar equipos</h2>
+<h2 id="pull-requests"><span class="header-section-number">10.2</span> pull-requests</h2>
+<h2 id="git-pages"><span class="header-section-number">10.3</span> git-pages</h2>
+<h1 id="sintaxis-avanzados-de-markdown"><span class="header-section-number">11</span> Sintaxis avanzados de Markdown</h1>
+<h2 id="ids"><span class="header-section-number">11.1</span> ids</h2>
+<h2 id="tablas"><span class="header-section-number">11.2</span> tablas</h2>
+<h2 id="bloques-citas-código"><span class="header-section-number">11.3</span> bloques (citas, código)</h2>
+<h2 id="enlaces-e-imágenes"><span class="header-section-number">11.4</span> enlaces e imágenes</h2>
+</body>
+</html>
