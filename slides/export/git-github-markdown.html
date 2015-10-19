@@ -7,7 +7,7 @@
   <meta name="description" content="Git, GitHub y Markdown" />
   <meta name="author" content="Adolfo Sanz De Diego" />
   <title>Git, GitHub y Markdown</title>
-  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">code{white-space: pre; background-color: lightgrey;}</style>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -54,36 +54,64 @@
 <li><a href="#mardownslides"><span class="toc-section-number">5.5</span> Mardownslides</a></li>
 </ul></li>
 <li><a href="#uso-básico-de-git"><span class="toc-section-number">6</span> Uso básico de Git</a><ul>
-<li><a href="#init"><span class="toc-section-number">6.1</span> init</a></li>
-<li><a href="#staging-area"><span class="toc-section-number">6.2</span> staging area</a></li>
-<li><a href="#status"><span class="toc-section-number">6.3</span> status</a></li>
-<li><a href="#diff"><span class="toc-section-number">6.4</span> diff</a></li>
-<li><a href="#add"><span class="toc-section-number">6.5</span> add</a></li>
-<li><a href="#reset"><span class="toc-section-number">6.6</span> reset</a></li>
-<li><a href="#commit"><span class="toc-section-number">6.7</span> commit</a></li>
-<li><a href="#checkout"><span class="toc-section-number">6.8</span> checkout</a></li>
-<li><a href="#log"><span class="toc-section-number">6.9</span> log</a></li>
+<li><a href="#iinicializar-un-reposiorio"><span class="toc-section-number">6.1</span> Iinicializar un reposiorio</a></li>
+<li><a href="#el-área-de-staging"><span class="toc-section-number">6.2</span> El área de staging</a></li>
+<li><a href="#ver-el-estado-de-los-archivos"><span class="toc-section-number">6.3</span> Ver el estado de los archivos</a></li>
+<li><a href="#ver-las-diferencias"><span class="toc-section-number">6.4</span> Ver las diferencias</a></li>
+<li><a href="#añadir-archivos"><span class="toc-section-number">6.5</span> Añadir archivos</a></li>
+<li><a href="#borrar-archivos"><span class="toc-section-number">6.6</span> Borrar archivos</a></li>
+<li><a href="#moverrenombrar-archivos"><span class="toc-section-number">6.7</span> Mover/renombrar archivos</a></li>
+<li><a href="#resetar-archivos"><span class="toc-section-number">6.8</span> Resetar archivos</a></li>
+<li><a href="#grabar-los-cambios"><span class="toc-section-number">6.9</span> Grabar los cambios</a></li>
+<li><a href="#deshacer-los-cambios"><span class="toc-section-number">6.10</span> Deshacer los cambios</a></li>
+<li><a href="#listado-de-cambios"><span class="toc-section-number">6.11</span> Listado de cambios</a></li>
+<li><a href="#ignorar-archivos"><span class="toc-section-number">6.12</span> Ignorar archivos</a></li>
+<li><a href="#creando-etiquetas"><span class="toc-section-number">6.13</span> Creando etiquetas</a></li>
+<li><a href="#etiquetas-tardías"><span class="toc-section-number">6.14</span> Etiquetas tardías</a></li>
 </ul></li>
 <li><a href="#uso-básico-de-github"><span class="toc-section-number">7</span> Uso básico de GitHub</a><ul>
 <li><a href="#configurar-claves"><span class="toc-section-number">7.1</span> Configurar claves</a></li>
-<li><a href="#clonar-repositorios"><span class="toc-section-number">7.2</span> Clonar repositorios</a></li>
-<li><a href="#uso-social"><span class="toc-section-number">7.3</span> Uso social</a></li>
+<li><a href="#cambiar-avatar"><span class="toc-section-number">7.2</span> Cambiar avatar</a></li>
+<li><a href="#doble-factor-de-autentificación"><span class="toc-section-number">7.3</span> Doble factor de autentificación</a></li>
+<li><a href="#uso-social"><span class="toc-section-number">7.4</span> Uso social</a></li>
 </ul></li>
 <li><a href="#sintaxis-básica-de-markdown"><span class="toc-section-number">8</span> Sintaxis básica de Markdown</a><ul>
 <li><a href="#encabezados"><span class="toc-section-number">8.1</span> Encabezados</a></li>
 <li><a href="#listas-no-numeradas"><span class="toc-section-number">8.2</span> Listas no numeradas</a></li>
 <li><a href="#listas-no-numeradas-1"><span class="toc-section-number">8.3</span> Listas no numeradas</a></li>
-<li><a href="#formato-negrita-cursiva-subrayado-tachado"><span class="toc-section-number">8.4</span> formato (negrita, cursiva, subrayado, tachado)</a></li>
+<li><a href="#formato-negrita-cursiva-tachado"><span class="toc-section-number">8.4</span> Formato (negrita, cursiva, tachado)</a></li>
 </ul></li>
 <li><a href="#uso-avanzado-de-git"><span class="toc-section-number">9</span> Uso avanzado de Git</a><ul>
-<li><a href="#gitignore-mv-y-rm"><span class="toc-section-number">9.1</span> .gitignore, mv y rm</a></li>
-<li><a href="#branch-checkout-y-merge"><span class="toc-section-number">9.2</span> branch, checkout y merge</a></li>
-<li><a href="#rebase-status-y-diff"><span class="toc-section-number">9.3</span> rebase, status y diff</a></li>
+<li><a href="#conectar-un-repositorio-remoto"><span class="toc-section-number">9.1</span> Conectar un repositorio remoto</a></li>
+<li><a href="#renombrar-un-repositorio-remoto"><span class="toc-section-number">9.2</span> Renombrar un repositorio remoto</a></li>
+<li><a href="#desconecctar-un-repositorio-remoto"><span class="toc-section-number">9.3</span> Desconecctar un repositorio remoto</a></li>
+<li><a href="#ver-los-repositorios-remotos"><span class="toc-section-number">9.4</span> Ver los repositorios remotos</a></li>
+<li><a href="#descargar-cambios-remotos"><span class="toc-section-number">9.5</span> Descargar cambios remotos</a></li>
+<li><a href="#descargar-y-combinar"><span class="toc-section-number">9.6</span> Descargar y combinar</a></li>
+<li><a href="#enviar-datos"><span class="toc-section-number">9.7</span> Enviar datos</a></li>
+<li><a href="#clonar-repositorios"><span class="toc-section-number">9.8</span> Clonar repositorios</a></li>
+<li><a href="#inspeccionar-repositorio-remoto"><span class="toc-section-number">9.9</span> Inspeccionar repositorio remoto</a></li>
+<li><a href="#resumen-áreas"><span class="toc-section-number">9.10</span> Resumen áreas</a></li>
+<li><a href="#crear-una-rama"><span class="toc-section-number">9.11</span> Crear una rama</a></li>
+<li><a href="#cambiar-de-rama"><span class="toc-section-number">9.12</span> Cambiar de rama</a></li>
+<li><a href="#crear-y-cambiar-de-rama"><span class="toc-section-number">9.13</span> Crear y cambiar de rama</a></li>
+<li><a href="#ver-las-ramas-y-el-head"><span class="toc-section-number">9.14</span> Ver las ramas y el HEAD</a></li>
+<li><a href="#fusionar-ramas"><span class="toc-section-number">9.15</span> Fusionar ramas</a></li>
+<li><a href="#solucionar-conflictos"><span class="toc-section-number">9.16</span> Solucionar conflictos</a></li>
+<li><a href="#borrar-ramas"><span class="toc-section-number">9.17</span> Borrar ramas</a></li>
+<li><a href="#listado-de-ramas-por-estado"><span class="toc-section-number">9.18</span> Listado de ramas por estado</a></li>
+<li><a href="#sincronizar-rama-remota"><span class="toc-section-number">9.19</span> Sincronizar rama remota</a></li>
+<li><a href="#asignar-rama-remota"><span class="toc-section-number">9.20</span> Asignar rama remota</a></li>
+<li><a href="#listado-de-todas-las-ramas"><span class="toc-section-number">9.21</span> Listado de todas las ramas</a></li>
+<li><a href="#eliminar-rama-remota"><span class="toc-section-number">9.22</span> Eliminar rama remota</a></li>
 </ul></li>
 <li><a href="#uso-avanzado-de-github"><span class="toc-section-number">10</span> Uso avanzado de GitHub</a><ul>
-<li><a href="#gestionar-equipos"><span class="toc-section-number">10.1</span> gestionar equipos</a></li>
-<li><a href="#pull-requests"><span class="toc-section-number">10.2</span> pull-requests</a></li>
-<li><a href="#git-pages"><span class="toc-section-number">10.3</span> git-pages</a></li>
+<li><a href="#gestionar-equipos"><span class="toc-section-number">10.1</span> Gestionar equipos</a></li>
+<li><a href="#crear-organizaciones"><span class="toc-section-number">10.2</span> Crear organizaciones</a></li>
+<li><a href="#pull-requests"><span class="toc-section-number">10.3</span> Pull-requests</a></li>
+<li><a href="#issues"><span class="toc-section-number">10.4</span> Issues</a></li>
+<li><a href="#wiki"><span class="toc-section-number">10.5</span> Wiki</a></li>
+<li><a href="#git-pages"><span class="toc-section-number">10.6</span> git-pages</a></li>
 </ul></li>
 <li><a href="#sintaxis-avanzados-de-markdown"><span class="toc-section-number">11</span> Sintaxis avanzados de Markdown</a><ul>
 <li><a href="#ids"><span class="toc-section-number">11.1</span> ids</a></li>
@@ -95,29 +123,35 @@
 </nav>
 <h1 id="acerca-de"><span class="header-section-number">1</span> Acerca de</h1>
 <h2 id="autor"><span class="header-section-number">1.1</span> Autor</h2>
-<p><strong>Adolfo Sanz De Diego</strong></p>
 <ul>
-<li><p>Blog: <a href="http://asanzdiego.blogspot.com.es/">asanzdiego.blogspot.com.es</a></p></li>
-<li><p>Correo: <a href="mailto:asanzdiego@gmail.com">asanzdiego@gmail.com</a></p></li>
-<li><p>GitHub: <a href="http://github.com/asanzdiego">github.com/asanzdiego</a></p></li>
-<li><p>Twitter: <a href="http://twitter.com/asanzdiego">twitter.com/asanzdiego</a></p></li>
-<li><p>LinkedIn: <a href="http://www.linkedin.com/in/asanzdiego">in/asanzdiego</a></p></li>
-<li><p>SlideShare: <a href="http://www.slideshare.net/asanzdiego/">slideshare.net/asanzdiego</a></p></li>
+<li><strong>Adolfo Sanz De Diego</strong>
+<ul>
+<li>Blog: <a href="http://asanzdiego.blogspot.com.es/">asanzdiego.blogspot.com.es</a></li>
+<li>Correo: <a href="mailto:asanzdiego@gmail.com">asanzdiego@gmail.com</a></li>
+<li>GitHub: <a href="http://github.com/asanzdiego">github.com/asanzdiego</a></li>
+<li>Twitter: <a href="http://twitter.com/asanzdiego">twitter.com/asanzdiego</a></li>
+<li>LinkedIn: <a href="http://www.linkedin.com/in/asanzdiego">in/asanzdiego</a></li>
+<li>SlideShare: <a href="http://www.slideshare.net/asanzdiego/">slideshare.net/asanzdiego</a></li>
+</ul></li>
 </ul>
 <h2 id="licencia"><span class="header-section-number">1.2</span> Licencia</h2>
-<p><strong>Este obra está bajo una licencia:</strong></p>
+<ul>
+<li><strong>Este obra está bajo una licencia:</strong>
 <ul>
 <li><a href="http://creativecommons.org/licenses/by-sa/3.0/es/">Creative Commons Reconocimiento-CompartirIgual 3.0</a></li>
+</ul></li>
 </ul>
 <h2 id="fuente"><span class="header-section-number">1.3</span> Fuente</h2>
-<p>Las slides y sus fuentes las podéis encontrar en:</p>
+<ul>
+<li>Las slides y sus fuentes las podéis encontrar en:
 <ul>
 <li><a href="https://github.com/asanzdiego/curso-git-github-markdown-2015">https://github.com/asanzdiego/curso-git-github-markdown-2015</a></li>
+</ul></li>
 </ul>
 <h1 id="introducción"><span class="header-section-number">2</span> Introducción</h1>
 <h2 id="objetivos"><span class="header-section-number">2.1</span> Objetivos</h2>
 <ol type="1">
-<li>Conocer las <strong>características de Git</strong> y ser capaz de instalar y configurarlo.</li>
+<li>Conocer las <strong>características de Git</strong> y ser capaz de instalarlo y configurarlo.</li>
 <li>Conocer y ser capaz de usar los <strong>comandos de Git</strong>.</li>
 <li>Conocer las <strong>características de GitHub</strong> y ser capaz de crear una cuenta y configurarla.</li>
 <li>Ser capaz de <strong>crear y clonar repositorios</strong> en GitHub.</li>
@@ -125,109 +159,131 @@
 <li>Conocer la <strong>sintaxis del lenguaje Markdown</strong>.</li>
 </ol>
 <h2 id="indice"><span class="header-section-number">2.2</span> Indice</h2>
-<p><strong>Bloque 1</strong></p>
 <ul>
-<li><p>Introducción a Git</p></li>
-<li><p>Introducción a GitHub</p></li>
-<li><p>Introducción Markdown</p></li>
-</ul>
-<p><strong>Bloque 2</strong></p>
+<li><strong>Bloque 1</strong>
 <ul>
-<li><p>Uso básico de Git</p></li>
-<li><p>Uso básico de GitHub</p></li>
-<li><p>Sintaxis básica de Markdown</p></li>
-</ul>
-<p><strong>Bloque 3</strong></p>
+<li>Introducción a Git</li>
+<li>Introducción a GitHub</li>
+<li>Introducción Markdown</li>
+</ul></li>
+<li><strong>Bloque 2</strong>
 <ul>
-<li><p>Uso avanzado de Git</p></li>
-<li><p>Uso avanzado de GitHub</p></li>
-<li><p>Sintaxis avanzada de Markdown</p></li>
+<li>Uso básico de Git</li>
+<li>Uso básico de GitHub</li>
+<li>Sintaxis básica de Markdown</li>
+</ul></li>
+<li><strong>Bloque 3</strong>
+<ul>
+<li>Uso avanzado de Git</li>
+<li>Uso avanzado de GitHub</li>
+<li>Sintaxis avanzada de Markdown</li>
+</ul></li>
 </ul>
 <h2 id="enlaces-de-interés"><span class="header-section-number">2.3</span> Enlaces de interés</h2>
-<p>Aprender GIT... y de camino GitHub:</p>
+<ul>
+<li>Aprender GIT... y de camino GitHub:
 <ul>
 <li><a href="https://github.com/oslugr/curso-git">https://github.com/oslugr/curso-git</a></li>
-</ul>
-<p>Página oficial de Git:</p>
+</ul></li>
+<li>Página oficial de Git:
 <ul>
 <li><a href="https://git-scm.com/">https://git-scm.com/</a></li>
-</ul>
-<p>Pro GIT:</p>
+</ul></li>
+<li>Pro GIT:
 <ul>
 <li><a href="https://git-scm.com/book/es/v2">https://git-scm.com/book/es/v2</a></li>
-</ul>
-<p>Minitutorial de GIT:</p>
+</ul></li>
+<li>Minitutorial de GIT:
 <ul>
 <li><a href="https://try.github.io/">https://try.github.io/</a></li>
-</ul>
-<p>Página oficial de GitHub:</p>
+</ul></li>
+<li>Página oficial de GitHub:
 <ul>
 <li><a href="https://github.com/">https://github.com/</a></li>
-</ul>
-<p>Chuleta de la sintaxis de Markdown:</p>
+</ul></li>
+<li>Chuleta de la sintaxis de Markdown:
 <ul>
 <li><a href="http://warpedvisions.org/projects/markdown-cheat-sheet">http://warpedvisions.org/projects/markdown-cheat-sheet</a></li>
+</ul></li>
 </ul>
 <h1 id="introducción-a-git"><span class="header-section-number">3</span> Introducción a Git</h1>
 <h2 id="sistema-control-de-versiones"><span class="header-section-number">3.1</span> Sistema Control de Versiones</h2>
 <blockquote>
 <p>&quot;Sistema que registra los cambios realizados sobre un archivo o conjunto de archivos a lo largo del tiempo, de modo que puedas recuperar versiones específicas más adelante.&quot;</p>
 </blockquote>
-<p><a href="https://git-scm.com/book/es/v1/Empezando-Acerca-del-control-de-versiones">https://git-scm.com/book/es/v1/Empezando-Acerca-del-control-de-versiones</a></p>
+<ul>
+<li><a href="https://git-scm.com/book/es/v1/Empezando-Acerca-del-control-de-versiones">https://git-scm.com/book/es/v1/Empezando-Acerca-del-control-de-versiones</a></li>
+</ul>
 <h2 id="vcs-locales"><span class="header-section-number">3.2</span> VCS Locales</h2>
-<p><strong>Lo más simple</strong>: hacer copias de directorios.</p>
-<p>Aparecieron <strong>BD en local</strong> que guardan el registro de los cambios realizados a los archivos.</p>
+<ul>
+<li><p><strong>Lo más simple</strong>: hacer copias de directorios.</p></li>
+<li><p>Aparecieron <strong>BD en local</strong> que guardan el registro de los cambios realizados a los archivos.</p></li>
+</ul>
 <h2 id="vcs-centralizados"><span class="header-section-number">3.3</span> VCS Centralizados</h2>
-<p>Un <strong>servidor central</strong> que guarda los cambios.</p>
+<ul>
+<li>Un <strong>servidor central</strong> que guarda los cambios.</li>
+</ul>
 <div style="text-align:center">
 <img src="../img/vcs-centralizado-bis.png" alt="VCS Centralizado" />
 </div>
 <h2 id="pros-y-contras-vcs-centralizados"><span class="header-section-number">3.4</span> Pros y Contras VCS Centralizados</h2>
-<p><strong>Pros</strong>: más colaborativo que el local.</p>
-<p><strong>Contras</strong>: dependes de un servidor central.</p>
+<ul>
+<li><p><strong>Pros</strong>: más colaborativo que el local.</p></li>
+<li><p><strong>Contras</strong>: dependes de un servidor central.</p></li>
+</ul>
 <h2 id="vcs-distribuidos"><span class="header-section-number">3.5</span> VCS Distribuidos</h2>
-<p>Cada cliente <strong>no solo descarga la última copia, sino todo el repositorio</strong>.</p>
+<ul>
+<li>Cada cliente <strong>no solo descarga la última copia, sino todo el repositorio</strong>.</li>
+</ul>
 <div style="text-align:center">
 <img src="../img/vcs-distribuido-bis.png" alt="VCS Distribuido" />
 </div>
 <h2 id="ventajes-vcs-distribuidos"><span class="header-section-number">3.6</span> Ventajes VCS Distribuidos</h2>
-<p>Puedes seguir trabajando aunque el repositorio remoto esté caido.</p>
+<ul>
+<li>Puedes seguir trabajando aunque el repositorio remoto esté caido.
 <ul>
 <li><strong>más autonomía</strong></li>
-</ul>
-<p>La información está más replicada.</p>
+</ul></li>
+<li>La información está más replicada.
 <ul>
 <li><strong>menos vulnerable</strong></li>
-</ul>
-<p>Permite pruebas en local y subir solo lo relevante.</p>
+</ul></li>
+<li>Permite pruebas en local y subir solo lo relevante.
 <ul>
 <li><strong>más limpieza</strong></li>
+</ul></li>
 </ul>
 <h2 id="características-de-git"><span class="header-section-number">3.7</span> Características de Git</h2>
-<p>Creado por Linux Torvalds, líder del equipo del kernel Linux.</p>
-<p>Objetivos cuando se creó:</p>
 <ul>
-<li><p><strong>Rápido</strong></p></li>
-<li><p><strong>Sencillo</strong></p></li>
-<li><p><strong>Multi rama</strong></p></li>
-<li><p><strong>Distribuido</strong></p></li>
-<li><p><strong>Grandes proyectos</strong></p></li>
+<li><p>Creado por <strong>Linux Torvalds</strong>, líder del equipo del kernel Linux.</p></li>
+<li>Objetivos cuando se creó:
+<ul>
+<li><strong>Rápido</strong></li>
+<li><strong>Sencillo</strong></li>
+<li><strong>Multi rama</strong></li>
+<li><strong>Distribuido</strong></li>
+<li><strong>Grandes proyectos</strong></li>
+</ul></li>
 </ul>
 <h2 id="instalación"><span class="header-section-number">3.8</span> Instalación</h2>
-<p>Windows: <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p>
-<p>Mac: <a href="https://git-scm.com/download/mac">https://git-scm.com/download/mac</a></p>
-<p>Linux: <a href="https://git-scm.com/download/linux">https://git-scm.com/download/linux</a></p>
+<ul>
+<li><p>Windows: <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a></p></li>
+<li><p>Mac: <a href="https://git-scm.com/download/mac">https://git-scm.com/download/mac</a></p></li>
+<li><p>Linux: <a href="https://git-scm.com/download/linux">https://git-scm.com/download/linux</a></p></li>
+</ul>
 <h2 id="configuración-inicial"><span class="header-section-number">3.9</span> Configuración inicial</h2>
 <pre><code>git config --global user.name &quot;Nombre que quieras mostrar&quot;</code></pre>
 <pre><code>git config --global user.email &quot;correo@electronico.es&quot;</code></pre>
 <h1 id="introducción-a-github"><span class="header-section-number">4</span> Introducción a GitHub</h1>
 <h2 id="características-de-github"><span class="header-section-number">4.1</span> Características de GitHub</h2>
-<p><strong>Plataforma de desarrollo colaborativo</strong>, que utiliza Git.</p>
-<p>Los <strong>repositorios son públicos</strong>, salvo con cuenta de pago.</p>
-<p>Tiene facetas de <strong>red social</strong> (perfil público, seguidores, estrellas, etc.)</p>
-<p>Nos permite <strong>gestionar organizaciones y equipos</strong>.</p>
-<p><strong>Gestión de proyectos</strong> (wiki, releases, incidencias, gráficos, etc.)</p>
-<p><strong>Servidor web</strong>.</p>
+<ul>
+<li><p><strong>Plataforma de desarrollo colaborativo</strong>, que utiliza Git.</p></li>
+<li><p>Los <strong>repositorios son públicos</strong>, salvo con cuenta de pago.</p></li>
+<li><p>Tiene facetas de <strong>red social</strong> (perfil público, seguidores, estrellas, etc.)</p></li>
+<li><p>Nos permite <strong>gestionar organizaciones y equipos</strong>.</p></li>
+<li><p><strong>Gestión de proyectos</strong> (wiki, releases, incidencias, gráficos, etc.)</p></li>
+<li><p><strong>Servidor web</strong>.</p></li>
+</ul>
 <h2 id="crear-cuenta"><span class="header-section-number">4.2</span> Crear cuenta</h2>
 <div style="text-align:center">
 <img src="../img/github-signup.png" alt="Crear cuenta en GitHub" />
@@ -241,122 +297,321 @@
 <blockquote>
 <p>&quot;Es un lenguaje de marcado ligero que trata de conseguir la máxima legibilidad y 'publicabilidad' usando texto plano.&quot;</p>
 </blockquote>
-<p><a href="https://es.wikipedia.org/wiki/Markdown">https://es.wikipedia.org/wiki/Markdown</a></p>
+<ul>
+<li><a href="https://es.wikipedia.org/wiki/Markdown">https://es.wikipedia.org/wiki/Markdown</a></li>
+</ul>
 <h2 id="características-principales"><span class="header-section-number">5.2</span> Características principales</h2>
-<p>Texto plano</p>
-<p>Sintaxis sencilla</p>
-<p>Legibilidad</p>
-<p>Publicabilidad</p>
-<p>Exportabiliad</p>
+<ul>
+<li>Texto plano</li>
+<li>Sintaxis sencilla</li>
+<li>Legibilidad</li>
+<li>Publicabilidad</li>
+<li>Exportabiliad</li>
+</ul>
 <h2 id="editor-online"><span class="header-section-number">5.3</span> Editor online</h2>
-<p><a href="https://jbt.github.io/markdown-editor/">https://jbt.github.io/markdown-editor/</a></p>
+<ul>
+<li><a href="https://jbt.github.io/markdown-editor/">https://jbt.github.io/markdown-editor/</a></li>
+</ul>
 <h2 id="chuleta-de-markdown"><span class="header-section-number">5.4</span> Chuleta de Markdown:</h2>
-<p><a href="http://warpedvisions.org/projects/markdown-cheat-sheet">http://warpedvisions.org/projects/markdown-cheat-sheet</a></p>
+<ul>
+<li><a href="http://warpedvisions.org/projects/markdown-cheat-sheet">http://warpedvisions.org/projects/markdown-cheat-sheet</a></li>
+</ul>
 <h2 id="mardownslides"><span class="header-section-number">5.5</span> Mardownslides</h2>
-<p><a href="https://github.com/asanzdiego/markdownslides">https://github.com/asanzdiego/markdownslides</a></p>
+<ul>
+<li><a href="https://github.com/asanzdiego/markdownslides">https://github.com/asanzdiego/markdownslides</a></li>
+</ul>
 <h1 id="uso-básico-de-git"><span class="header-section-number">6</span> Uso básico de Git</h1>
-<h2 id="init"><span class="header-section-number">6.1</span> init</h2>
-<p><strong>Inicializar</strong> un repositorio.</p>
-<p>Crea el subdirectorio .git con archivos de git par agestionar repositorio.</p>
+<h2 id="iinicializar-un-reposiorio"><span class="header-section-number">6.1</span> Iinicializar un reposiorio</h2>
+<ul>
+<li>Crea el <strong>subdirectorio .git</strong> con archivos de git para gestionar el repositorio.</li>
+</ul>
 <pre><code>git init</code></pre>
-<h2 id="staging-area"><span class="header-section-number">6.2</span> staging area</h2>
+<h2 id="el-área-de-staging"><span class="header-section-number">6.2</span> El área de staging</h2>
 <div style="text-align:center">
 <img src="../img/git-staging-area-bis.png" alt="Staging Area" />
 </div>
-<h2 id="status"><span class="header-section-number">6.3</span> status</h2>
-<p>Para saber el <strong>estado</strong> de los archivos.</p>
+<h2 id="ver-el-estado-de-los-archivos"><span class="header-section-number">6.3</span> Ver el estado de los archivos</h2>
+<ul>
+<li>Importante saber el <strong>estado</strong> de los archivos.</li>
+</ul>
 <pre><code>git status</code></pre>
-<h2 id="diff"><span class="header-section-number">6.4</span> diff</h2>
-<p>Para ver las <strong>diferencias</strong> entre el área de staging y el área de trabajo.</p>
+<h2 id="ver-las-diferencias"><span class="header-section-number">6.4</span> Ver las diferencias</h2>
+<ul>
+<li>Podemos ver las <strong>diferencias</strong> entre el área de staging y el área de trabajo.</li>
+</ul>
 <pre><code>git diff</code></pre>
-<h2 id="add"><span class="header-section-number">6.5</span> add</h2>
-<p>Para <strong>añadir</strong> los cambios de un fichero (o varios) al área de staging (desde el área de trabajo).</p>
+<h2 id="añadir-archivos"><span class="header-section-number">6.5</span> Añadir archivos</h2>
+<ul>
+<li>Podemos <strong>añadir</strong> los cambios de un fichero (o varios) al área de staging (desde el área de trabajo).</li>
+</ul>
 <pre><code>git add nombre-del-fichero</code></pre>
 <pre><code>git add *.extension</code></pre>
-<h2 id="reset"><span class="header-section-number">6.6</span> reset</h2>
-<p>Para <strong>resetear</strong> los cambios de un fichero (o varios) al area de trabajo (desde el area de staging).</p>
+<h2 id="borrar-archivos"><span class="header-section-number">6.6</span> Borrar archivos</h2>
+<ul>
+<li>Podemos <strong>borrar archivos</strong> del área de staging (también lo borrará del área de trabajo)</li>
+</ul>
+<pre><code>git rm nombre-del-fichero</code></pre>
+<h2 id="moverrenombrar-archivos"><span class="header-section-number">6.7</span> Mover/renombrar archivos</h2>
+<ul>
+<li>Podemos <strong>mover/renombrar archivos</strong> en el área de staging (también lo hará en el área de trabajo)</li>
+</ul>
+<pre><code>git mv antiguo-nombre-del-fichero nuevo-nombre-del-fichero</code></pre>
+<h2 id="resetar-archivos"><span class="header-section-number">6.8</span> Resetar archivos</h2>
+<ul>
+<li>Para <strong>resetear</strong> los cambios de un fichero (o varios) al area de trabajo (desde el area de staging).</li>
+</ul>
 <pre><code>git reset nombre-del-fichero</code></pre>
-<h2 id="commit"><span class="header-section-number">6.7</span> commit</h2>
-<p>Para <strong>subir</strong> los cambios realizados al repositorio (desde el área de staging).</p>
+<h2 id="grabar-los-cambios"><span class="header-section-number">6.9</span> Grabar los cambios</h2>
+<ul>
+<li>Para <strong>grabar</strong> los cambios realizados al repositorio (desde el área de staging).</li>
+</ul>
 <pre><code>git commit -m &quot;mensaje corto descriptivo con los cambios&quot;</code></pre>
-<h2 id="checkout"><span class="header-section-number">6.8</span> checkout</h2>
-<p>Para <strong>deshacer</strong> los cambios de un fichero (o varios) al area de staging (desde el repositorio).</p>
+<h2 id="deshacer-los-cambios"><span class="header-section-number">6.10</span> Deshacer los cambios</h2>
+<ul>
+<li>Para <strong>deshacer</strong> los cambios de un fichero (o varios) al area de staging (desde el repositorio).</li>
+</ul>
 <pre><code>git checkout nombre-del-fichero</code></pre>
-<h2 id="log"><span class="header-section-number">6.9</span> log</h2>
-<p>Para ver el <strong>listado de los commits</strong> realizados en el repositorio.</p>
+<h2 id="listado-de-cambios"><span class="header-section-number">6.11</span> Listado de cambios</h2>
+<ul>
+<li>Para ver el <strong>listado de cambios</strong> realizados en el repositorio.</li>
+</ul>
 <pre><code>git log</code></pre>
+<h2 id="ignorar-archivos"><span class="header-section-number">6.12</span> Ignorar archivos</h2>
+<ul>
+<li>Podemos ignorar archivos añadiendolos al fichero <strong>.gitignore</strong>.</li>
+</ul>
+<h2 id="creando-etiquetas"><span class="header-section-number">6.13</span> Creando etiquetas</h2>
+<ul>
+<li>Existen etiquetas <strong>ligeras</strong>, y etiquetas <strong>anotadas</strong> (iguales pero estas con más información)</li>
+</ul>
+<pre><code>git tag nombre-etiqueta-lijera</code></pre>
+<pre><code>git tag -a nombre-etiqueta-anotada -m &quot;mensaje que acompaña a la etiqueta&quot;</code></pre>
+<h2 id="etiquetas-tardías"><span class="header-section-number">6.14</span> Etiquetas tardías</h2>
+<ul>
+<li>Se puede crear una etiqueta <strong>conociendo el hash del commit</strong> (verlo con git log).</li>
+</ul>
+<pre><code>git tag -a nombre-etiqueta-anotada hash-del-commit</code></pre>
 <h1 id="uso-básico-de-github"><span class="header-section-number">7</span> Uso básico de GitHub</h1>
 <h2 id="configurar-claves"><span class="header-section-number">7.1</span> Configurar claves</h2>
-<p>Nos permite gestionar repositorios <strong>mediante SSH</strong> sin tener que estar poniendo siempre nuestra constraseña.</p>
-<p>Se genera una <strong>clave privada</strong> que se guarde en nuestro ordenador y una <strong>clave pública</strong> que es la que tenemos que guardar en nuestra cuenta.</p>
-<p>La podemos usar pues <strong>solo con un ordenador</strong>.</p>
-<p>Instrucciones:</p>
+<ul>
+<li><p>Nos permite gestionar repositorios <strong>mediante SSH</strong> sin tener que estar poniendo siempre nuestra constraseña.</p></li>
+<li><p>Se genera una <strong>clave privada</strong> que se guarde en nuestro ordenador y una <strong>clave pública</strong> que es la que tenemos que guardar en nuestra cuenta.</p></li>
+<li><p>La podemos usar pues <strong>solo con un ordenador</strong>.</p></li>
+<li><p>Instrucciones:</p>
 <ul>
 <li><a href="https://help.github.com/articles/generating-ssh-keys/">https://help.github.com/articles/generating-ssh-keys/</a></li>
+</ul></li>
 </ul>
-<h2 id="clonar-repositorios"><span class="header-section-number">7.2</span> Clonar repositorios</h2>
-<p>Además de con git init, podemos empezar a trabajar con reposiorios clonandolos:</p>
-<pre><code>git clone git@github.com:asanzdiego/markdownslides.git</code></pre>
-<h2 id="uso-social"><span class="header-section-number">7.3</span> Uso social</h2>
-<p>Seguir a gente.</p>
-<p>Seguir proyectos (watch).</p>
-<p>Premiar proyectos (start).</p>
-<p>Forquear proyectos (fork).</p>
-<p>Pull-requests.</p>
-<p>Issues.</p>
-<p>Crear organizaciones.</p>
+<h2 id="cambiar-avatar"><span class="header-section-number">7.2</span> Cambiar avatar</h2>
+<ul>
+<li>View profile and more &gt; Settings &gt; Profile</li>
+</ul>
+<div style="text-align:center">
+<img src="../img/github-avatar.png" alt="Cambiar avatar en GitHub" />
+</div>
+<h2 id="doble-factor-de-autentificación"><span class="header-section-number">7.3</span> Doble factor de autentificación</h2>
+<ul>
+<li>View profile and more &gt; Settings &gt; Security</li>
+</ul>
+<div style="text-align:center">
+<img src="../img/github-2-factor-authentication.png" alt="Activr el doble factor de autentificación en GitHub" />
+</div>
+<h2 id="uso-social"><span class="header-section-number">7.4</span> Uso social</h2>
+<ul>
+<li>Características sociales:
+<ul>
+<li>Seguir a gente.</li>
+<li>Seguir proyectos (watch).</li>
+<li>Premiar proyectos (start).</li>
+<li>Forquear proyectos (fork).</li>
+<li>Crear organizaciones.</li>
+</ul></li>
+</ul>
 <h1 id="sintaxis-básica-de-markdown"><span class="header-section-number">8</span> Sintaxis básica de Markdown</h1>
 <h2 id="encabezados"><span class="header-section-number">8.1</span> Encabezados</h2>
-<p><code>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;</code></p>
+<ul>
+<li><code>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt;</code></li>
+</ul>
 <pre><code># Encabezado de primer nivel
 
 ## Encabezado de segundo nivel
 
 ##\# Encabezado de tercer nivel</code></pre>
-<p>Equivalente a lo anterior.</p>
+<ul>
+<li>Equivalente a lo anterior.</li>
+</ul>
 <pre><code>Encabezado de primer nivel
 ==========================
 
 Encabezado de segundo nivel
-
-- -------------------------
+---------------------------
 
 ##\# Encabezado de tercer nivel ##\#</code></pre>
 <h2 id="listas-no-numeradas"><span class="header-section-number">8.2</span> Listas no numeradas</h2>
-<p>No enumeradas: * se puede usar el asterísico</p>
 <ul>
-<li>se puede usar el menos
+<li>No enumeradas:
 <ul>
+<li>se puede usar el menos</li>
+<li>se puede usar el asterísico</li>
 <li>se puede usar el más</li>
 </ul></li>
 </ul>
-<pre><code>* se puede usar el asterísico
-
-se puede usar el menos
+<pre><code>- se puede usar el menos
+* se puede usar el asterísico
 + se puede usar el más</code></pre>
 <h2 id="listas-no-numeradas-1"><span class="header-section-number">8.3</span> Listas no numeradas</h2>
-<p>Enumeradas: 1. Primer elemento 1. Segundo elemento 1. Tercer elemento</p>
+<ul>
+<li>Enumeradas:
+<ol type="1">
+<li>Primer elemento</li>
+<li>Segundo elemento</li>
+<li>Tercer elemento</li>
+</ol></li>
+</ul>
 <pre><code>1. Primer elemento
 1. Segundo elemento
 1. Tercer elemento</code></pre>
-<h2 id="formato-negrita-cursiva-subrayado-tachado"><span class="header-section-number">8.4</span> formato (negrita, cursiva, subrayado, tachado)</h2>
-<p>Texto en cursiva con <em>un asterisco</em> o con <em>un guión bajo</em>.</p>
-<p>Texto en negrita con <strong>dos asteriscos</strong> o con <strong>dos guiones bajos</strong>.</p>
-<p>Texto <del>tachado</del>.</p>
-<pre><code>
-Texto en cursiva con *un asterisco* o con _un guión bajo_.
-
-Texto en negrita con **dos asteriscos** o con __dos guiones bajos__.
-
-Texto ~~tachado~~.</code></pre>
+<h2 id="formato-negrita-cursiva-tachado"><span class="header-section-number">8.4</span> Formato (negrita, cursiva, tachado)</h2>
+<ul>
+<li>Texto en cursiva con <em>un asterisco</em> o con <em>un guión bajo</em>.</li>
+<li>Texto en negrita con <strong>dos asteriscos</strong> o con <strong>dos guiones bajos</strong>.</li>
+<li>Texto tachado con <del>dos virgulillas</del>.</li>
+</ul>
+<pre><code>- Texto negrita con **dos asteriscos** o con __dos guiones bajos__.
+- Texto cursiva con *un asterisco* o con _un guión bajo_.
+- Texto tachado con ~~dos virgulillas~~.</code></pre>
 <h1 id="uso-avanzado-de-git"><span class="header-section-number">9</span> Uso avanzado de Git</h1>
-<h2 id="gitignore-mv-y-rm"><span class="header-section-number">9.1</span> .gitignore, mv y rm</h2>
-<h2 id="branch-checkout-y-merge"><span class="header-section-number">9.2</span> branch, checkout y merge</h2>
-<h2 id="rebase-status-y-diff"><span class="header-section-number">9.3</span> rebase, status y diff</h2>
+<h2 id="conectar-un-repositorio-remoto"><span class="header-section-number">9.1</span> Conectar un repositorio remoto</h2>
+<ul>
+<li>Podemos <strong>conectar uno o varios reposiorios remotos</strong> a nuestro repositorio.</li>
+</ul>
+<pre><code>git remote add alias-repositorio-remoto url-repositorio-remoto</code></pre>
+<h2 id="renombrar-un-repositorio-remoto"><span class="header-section-number">9.2</span> Renombrar un repositorio remoto</h2>
+<ul>
+<li>Podemos <strong>renombrar el alias de un reposiorio remoto</strong>.</li>
+</ul>
+<pre><code>git remote rename antiguo-alias nuevo-alias</code></pre>
+<h2 id="desconecctar-un-repositorio-remoto"><span class="header-section-number">9.3</span> Desconecctar un repositorio remoto</h2>
+<ul>
+<li>Podemos <strong>desconectar un reposiorio remoto</strong>.</li>
+</ul>
+<pre><code>git remove alias-repositorio-remoto</code></pre>
+<h2 id="ver-los-repositorios-remotos"><span class="header-section-number">9.4</span> Ver los repositorios remotos</h2>
+<ul>
+<li>Podemos <strong>ver los repositorios remotos conectados y los permisos que tenemos</strong>.</li>
+</ul>
+<pre><code>git remote -v</code></pre>
+<h2 id="descargar-cambios-remotos"><span class="header-section-number">9.5</span> Descargar cambios remotos</h2>
+<ul>
+<li>Podemos <strong>descargar los cambios remotos sin modificar nuestro repositorio local</strong>.</li>
+</ul>
+<pre><code>git fetch alias-repositorio-remoto</code></pre>
+<h2 id="descargar-y-combinar"><span class="header-section-number">9.6</span> Descargar y combinar</h2>
+<ul>
+<li>Podemos <strong>descargar y combinar los cambios remotos</strong> con los de tu repositorio local.</li>
+</ul>
+<pre><code>git pull alias-repositorio-remoto nombre-rama-repositorio-remoto</code></pre>
+<h2 id="enviar-datos"><span class="header-section-number">9.7</span> Enviar datos</h2>
+<ul>
+<li>Podemos <strong>enviar datos al reposiorio remoto</strong> (solo si está up-to-date).</li>
+</ul>
+<pre><code>git push alias-repositorio-remoto nombre-rama-repositorio-remoto</code></pre>
+<h2 id="clonar-repositorios"><span class="header-section-number">9.8</span> Clonar repositorios</h2>
+<ul>
+<li>Clonar es como:
+<ul>
+<li>hacer un init</li>
+<li>luego un remote add</li>
+<li>luego un fetch con alias=origin</li>
+<li>dejando las ramas remota y local en master</li>
+</ul></li>
+</ul>
+<pre><code>git clone url-repositorio-remoto</code></pre>
+<h2 id="inspeccionar-repositorio-remoto"><span class="header-section-number">9.9</span> Inspeccionar repositorio remoto</h2>
+<ul>
+<li>Podemos ver <strong>información de un remoto particuar, y como están configurados pull y push</strong>.</li>
+</ul>
+<pre><code>git remote show alias-repositorio-remoto</code></pre>
+<h2 id="resumen-áreas"><span class="header-section-number">9.10</span> Resumen áreas</h2>
+<div style="text-align:center">
+<img src="../img/git-all-areas-estrecho-bis.png" alt="Resumen áreas GIT" />
+</div>
+<h2 id="crear-una-rama"><span class="header-section-number">9.11</span> Crear una rama</h2>
+<ul>
+<li><p>Podemos crear ramas que son <strong>apuntadores que podemos mover por los distintos snapshots</strong>.</p></li>
+<li><p>Solo la creamos, no nos situamos en ella.</p></li>
+</ul>
+<pre><code>git branch nombre-rama</code></pre>
+<h2 id="cambiar-de-rama"><span class="header-section-number">9.12</span> Cambiar de rama</h2>
+<ul>
+<li><p>El HEAD es el apuntador que usa GIT para saber en que rama estás.</p></li>
+<li><p>Cuando cambiamos de rama GIT <strong>cambia el HEAD y los ficheros de tu área de trabajo</strong>.</p></li>
+</ul>
+<pre><code>git checkout nombre-rama</code></pre>
+<h2 id="crear-y-cambiar-de-rama"><span class="header-section-number">9.13</span> Crear y cambiar de rama</h2>
+<ul>
+<li>Podemos <strong>crear y cambiar de rama</strong> con un mismo comando.</li>
+</ul>
+<pre><code>git checkout -b nombre-rama</code></pre>
+<h2 id="ver-las-ramas-y-el-head"><span class="header-section-number">9.14</span> Ver las ramas y el HEAD</h2>
+<ul>
+<li>Podemos <strong>ver las ramas y donde apunta el HEAD</strong>.</li>
+</ul>
+<pre><code>git log --oneline --decorate --graph --all</code></pre>
+<pre><code>git branch -v</code></pre>
+<h2 id="fusionar-ramas"><span class="header-section-number">9.15</span> Fusionar ramas</h2>
+<ul>
+<li>GIT es <strong>muy potente</strong> con la fusión de ramas.</li>
+</ul>
+<pre><code>git merge nombre-rama</code></pre>
+<h2 id="solucionar-conflictos"><span class="header-section-number">9.16</span> Solucionar conflictos</h2>
+<ul>
+<li>Si al hacer un merge existan conflictos <strong>GIT los apunta en los propios ficheros</strong>.</li>
+</ul>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:index.html
+&lt;div id=&quot;footer&quot;&gt;contact : email.support@github.com&lt;/div&gt;
+=======
+&lt;div id=&quot;footer&quot;&gt;please contact us at support@github.com&lt;/div&gt;
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; issue:index.html</code></pre>
+<h2 id="borrar-ramas"><span class="header-section-number">9.17</span> Borrar ramas</h2>
+<ul>
+<li>Una vez fusionado la rama en el master, <strong>conviene borrarla</strong> (solo nos deja si está fusionada).</li>
+</ul>
+<pre><code>git branch -d nombre-rama</code></pre>
+<h2 id="listado-de-ramas-por-estado"><span class="header-section-number">9.18</span> Listado de ramas por estado</h2>
+<ul>
+<li>Podemos saber <strong>que ramas están fusionada y cuales no</strong>.</li>
+</ul>
+<pre><code>git branch --merged</code></pre>
+<pre><code>git branch --no-merged</code></pre>
+<h2 id="sincronizar-rama-remota"><span class="header-section-number">9.19</span> Sincronizar rama remota</h2>
+<ul>
+<li>Igual que sincronizamos la rama master remota, podemos <strong>sincronizar otras ramas remotas</strong>.</li>
+</ul>
+<pre><code>git checkout -b nombre-rama-local alias-repositorio-remoto/nombre-rama-remota</code></pre>
+<pre><code>git checkout -track alias-repositorio-remoto/nombre-rama-remota</code></pre>
+<h2 id="asignar-rama-remota"><span class="header-section-number">9.20</span> Asignar rama remota</h2>
+<ul>
+<li>Podemos <strong>asignar el área de trabajo a una rama remota</strong>.</li>
+</ul>
+<pre><code>git checkout -u alias-repositorio-remoto/nombre-rama-remota</code></pre>
+<h2 id="listado-de-todas-las-ramas"><span class="header-section-number">9.21</span> Listado de todas las ramas</h2>
+<ul>
+<li>Podemos listar no solo las ramas locales, sino <strong>también las remotas</strong>.</li>
+</ul>
+<pre><code>git checkout -vv</code></pre>
+<h2 id="eliminar-rama-remota"><span class="header-section-number">9.22</span> Eliminar rama remota</h2>
+<ul>
+<li>Podemos <strong>eliminar las ramas remotas</strong>.</li>
+</ul>
+<pre><code>git push alias-repositorio-remoto --delete nombre-rama-remota</code></pre>
 <h1 id="uso-avanzado-de-github"><span class="header-section-number">10</span> Uso avanzado de GitHub</h1>
-<h2 id="gestionar-equipos"><span class="header-section-number">10.1</span> gestionar equipos</h2>
-<h2 id="pull-requests"><span class="header-section-number">10.2</span> pull-requests</h2>
-<h2 id="git-pages"><span class="header-section-number">10.3</span> git-pages</h2>
+<h2 id="gestionar-equipos"><span class="header-section-number">10.1</span> Gestionar equipos</h2>
+<h2 id="crear-organizaciones"><span class="header-section-number">10.2</span> Crear organizaciones</h2>
+<h2 id="pull-requests"><span class="header-section-number">10.3</span> Pull-requests</h2>
+<h2 id="issues"><span class="header-section-number">10.4</span> Issues</h2>
+<h2 id="wiki"><span class="header-section-number">10.5</span> Wiki</h2>
+<h2 id="git-pages"><span class="header-section-number">10.6</span> git-pages</h2>
 <h1 id="sintaxis-avanzados-de-markdown"><span class="header-section-number">11</span> Sintaxis avanzados de Markdown</h1>
 <h2 id="ids"><span class="header-section-number">11.1</span> ids</h2>
 <h2 id="tablas"><span class="header-section-number">11.2</span> tablas</h2>

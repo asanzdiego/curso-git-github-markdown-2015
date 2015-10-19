@@ -36,7 +36,7 @@
 
 ## Objetivos
 
-1. Conocer las **características de Git** y ser capaz de instalar y configurarlo.
+1. Conocer las **características de Git** y ser capaz de instalarlo y configurarlo.
 2. Conocer y ser capaz de usar los **comandos de Git**.
 3. Conocer las **características de GitHub** y ser capaz de crear una cuenta y configurarla.
 4. Ser capaz de **crear y clonar repositorios** en GitHub.
@@ -90,7 +90,7 @@
 conjunto de archivos a lo largo del tiempo, de modo que
 puedas recuperar versiones específicas más adelante."
 
-<https://git-scm.com/book/es/v1/Empezando-Acerca-del-control-de-versiones>
+- <https://git-scm.com/book/es/v1/Empezando-Acerca-del-control-de-versiones>
 
 ## VCS Locales
 
@@ -129,7 +129,7 @@ puedas recuperar versiones específicas más adelante."
 
 ##  Características de Git
 
-- Creado por Linux Torvalds, líder del equipo del kernel Linux.
+- Creado por **Linux Torvalds**, líder del equipo del kernel Linux.
 
 - Objetivos cuando se creó:
     - **Rápido**
@@ -195,7 +195,7 @@ git config --global user.email "correo@electronico.es"
 > "Es un lenguaje de marcado ligero que trata de conseguir la máxima
 legibilidad y 'publicabilidad' usando texto plano."
 
-<https://es.wikipedia.org/wiki/Markdown>
+- <https://es.wikipedia.org/wiki/Markdown>
 
 ##  Características principales
 
@@ -223,41 +223,37 @@ legibilidad y 'publicabilidad' usando texto plano."
 
 
 
-## init
+## Iinicializar un reposiorio
 
-- **Inicializar** un repositorio.
-
-- Crea el subdirectorio .git con archivos de git par agestionar repositorio.
+- Crea el **subdirectorio .git** con archivos de git para gestionar el repositorio.
 
 ~~~
 git init
 ~~~
 
-
-
-## staging area
+## El área de staging
 
 ![Staging Area](../img/git-staging-area-bis.png)
 
-##  status
+##  Ver el estado de los archivos
 
-- Para saber el **estado** de los archivos.
+- Importante saber el **estado** de los archivos.
 
 ~~~
 git status
 ~~~
 
-##  diff
+##  Ver las diferencias
 
-- Para ver las **diferencias** entre el área de staging y el área de trabajo.
+- Podemos ver las **diferencias** entre el área de staging y el área de trabajo.
 
 ~~~
 git diff
 ~~~
 
-##  add
+##  Añadir archivos
 
-- Para **añadir** los cambios de un fichero (o varios) al área de staging (desde el área de trabajo).
+- Podemos **añadir** los cambios de un fichero (o varios) al área de staging (desde el área de trabajo).
 
 ~~~
 git add nombre-del-fichero
@@ -267,7 +263,23 @@ git add nombre-del-fichero
 git add *.extension
 ~~~
 
-##  reset
+## Borrar archivos
+
+- Podemos **borrar archivos** del área de staging (también lo borrará del área de trabajo)
+
+~~~
+git rm nombre-del-fichero
+~~~
+
+## Mover/renombrar archivos
+
+- Podemos **mover/renombrar archivos** en el área de staging (también lo hará en el área de trabajo)
+
+~~~
+git mv antiguo-nombre-del-fichero nuevo-nombre-del-fichero
+~~~
+
+##  Resetar archivos
 
 - Para **resetear** los cambios de un fichero (o varios) al area de trabajo (desde el area de staging).
 
@@ -275,15 +287,15 @@ git add *.extension
 git reset nombre-del-fichero
 ~~~
 
-##  commit
+##  Grabar los cambios
 
-- Para **subir** los cambios realizados al repositorio (desde el área de staging).
+- Para **grabar** los cambios realizados al repositorio (desde el área de staging).
 
 ~~~
 git commit -m "mensaje corto descriptivo con los cambios"
 ~~~
 
-##  checkout
+##  Deshacer los cambios
 
 - Para **deshacer** los cambios de un fichero (o varios) al area de staging (desde el repositorio).
 
@@ -291,12 +303,36 @@ git commit -m "mensaje corto descriptivo con los cambios"
 git checkout nombre-del-fichero
 ~~~
 
-## log
+## Listado de cambios
 
-- Para ver el **listado de los commits** realizados en el repositorio.
+- Para ver el **listado de cambios** realizados en el repositorio.
 
 ~~~
 git log
+~~~
+
+## Ignorar archivos
+
+- Podemos ignorar archivos añadiendolos al fichero **.gitignore**.
+
+## Creando etiquetas
+
+- Existen etiquetas **ligeras**, y etiquetas **anotadas** (iguales pero estas con más información)
+
+~~~
+git tag nombre-etiqueta-lijera
+~~~
+
+~~~
+git tag -a nombre-etiqueta-anotada -m "mensaje que acompaña a la etiqueta"
+~~~
+
+## Etiquetas tardías
+
+- Se puede crear una etiqueta **conociendo el hash del commit** (verlo con git log).
+
+~~~
+git tag -a nombre-etiqueta-anotada hash-del-commit
 ~~~
 
 
@@ -321,24 +357,26 @@ una **clave pública** que es la que tenemos que guardar en nuestra cuenta.
 
     - <https://help.github.com/articles/generating-ssh-keys/>
 
-##  Clonar repositorios
+## Cambiar avatar
 
-- Además de con git init, podemos empezar a trabajar con reposiorios clonandolos:
+- View profile and more > Settings > Profile
 
-~~~
-git clone git@github.com:asanzdiego/markdownslides.git
-~~~
+![Cambiar avatar en GitHub](../img/github-avatar.png)
+
+## Doble factor de autentificación
+
+- View profile and more > Settings > Security
+
+![Activr el doble factor de autentificación en GitHub](../img/github-2-factor-authentication.png)
 
 ##  Uso social
 
-- Seguir a gente.
-- Seguir proyectos (watch).
-- Premiar proyectos (start).
-- Forquear proyectos (fork).
-- Pull-requests.
-- Issues.
-- Crear organizaciones.
-
+- Características sociales:
+    - Seguir a gente.
+    - Seguir proyectos (watch).
+    - Premiar proyectos (start).
+    - Forquear proyectos (fork).
+    - Crear organizaciones.
 
 
 
@@ -375,13 +413,13 @@ Encabezado de segundo nivel
 ##  Listas no numeradas
 
 - No enumeradas:
-    * se puede usar el asterísico
     - se puede usar el menos
+    * se puede usar el asterísico
     + se puede usar el más
 
 ~~~
-* se puede usar el asterísico
 - se puede usar el menos
+* se puede usar el asterísico
 + se puede usar el más
 ~~~
 
@@ -398,27 +436,219 @@ Encabezado de segundo nivel
 1. Tercer elemento
 ~~~
 
-##  formato (negrita, cursiva, subrayado, tachado)
+##  Formato (negrita, cursiva, tachado)
 
 - Texto en cursiva con *un asterisco* o con _un guión bajo_.
 - Texto en negrita con **dos asteriscos** o con __dos guiones bajos__.
-- Texto ~~tachado~~.
+- Texto tachado con ~~dos virgulillas~~.
 
 ~~~
-- Texto en cursiva con *un asterisco* o con _un guión bajo_.
-- Texto en negrita con **dos asteriscos** o con __dos guiones bajos__.
-- Texto ~~tachado~~.
+- Texto negrita con **dos asteriscos** o con __dos guiones bajos__.
+- Texto cursiva con *un asterisco* o con _un guión bajo_.
+- Texto tachado con ~~dos virgulillas~~.
 ~~~
+
+
 
 # Uso avanzado de Git
 
 
 
-##  .gitignore, mv y rm
+## Conectar un repositorio remoto
 
-##  branch, checkout y merge
+- Podemos **conectar uno o varios reposiorios remotos** a nuestro repositorio.
 
-##  rebase, status y diff
+~~~
+git remote add alias-repositorio-remoto url-repositorio-remoto
+~~~
+
+## Renombrar un repositorio remoto
+
+- Podemos **renombrar el alias de un reposiorio remoto**.
+
+~~~
+git remote rename antiguo-alias nuevo-alias
+~~~
+
+## Desconecctar un repositorio remoto
+
+- Podemos **desconectar un reposiorio remoto**.
+
+~~~
+git remove alias-repositorio-remoto
+~~~
+
+## Ver los repositorios remotos
+
+- Podemos **ver los repositorios remotos conectados y los permisos que tenemos**.
+
+~~~
+git remote -v
+~~~
+
+## Descargar cambios remotos
+
+- Podemos **descargar los cambios remotos sin modificar nuestro repositorio local**.
+
+~~~
+git fetch alias-repositorio-remoto
+~~~
+
+## Descargar y combinar
+
+- Podemos **descargar y combinar los cambios remotos** con los de tu repositorio local.
+
+~~~
+git pull alias-repositorio-remoto nombre-rama-repositorio-remoto
+~~~
+
+## Enviar datos
+
+- Podemos **enviar datos al reposiorio remoto** (solo si está up-to-date).
+
+~~~
+git push alias-repositorio-remoto nombre-rama-repositorio-remoto
+~~~
+
+##  Clonar repositorios
+
+- Clonar es como:
+    - hacer un init
+    - luego un remote add
+    - luego un fetch con alias=origin
+    - dejando las ramas remota y local en master
+
+~~~
+git clone url-repositorio-remoto
+~~~
+
+## Inspeccionar repositorio remoto
+
+- Podemos ver **información de un remoto particuar, y como están configurados pull y push**.
+
+~~~
+git remote show alias-repositorio-remoto
+~~~
+
+## Resumen áreas
+
+![Resumen áreas GIT](../img/git-all-areas-estrecho-bis.png)
+
+## Crear una rama
+
+- Podemos crear ramas que son **apuntadores que podemos mover por los distintos snapshots**.
+
+- Solo la creamos, no nos situamos en ella.
+
+~~~
+git branch nombre-rama
+~~~
+
+## Cambiar de rama
+
+- El HEAD es el apuntador que usa GIT para saber en que rama estás.
+
+- Cuando cambiamos de rama GIT **cambia el HEAD y los ficheros de tu área de trabajo**.
+
+~~~
+git checkout nombre-rama
+~~~
+
+## Crear y cambiar de rama
+
+- Podemos **crear y cambiar de rama** con un mismo comando.
+
+~~~
+git checkout -b nombre-rama
+~~~
+
+## Ver las ramas y el HEAD
+
+- Podemos **ver las ramas y donde apunta el HEAD**.
+
+~~~
+git log --oneline --decorate --graph --all
+~~~
+
+~~~
+git branch -v
+~~~
+
+## Fusionar ramas
+
+- GIT es **muy potente** con la fusión de ramas.
+
+~~~
+git merge nombre-rama
+~~~
+
+## Solucionar conflictos
+
+- Si al hacer un merge existan conflictos **GIT los apunta en los propios ficheros**.
+
+~~~
+<<<<<<< HEAD:index.html
+<div id="footer">contact : email.support@github.com</div>
+=======
+<div id="footer">please contact us at support@github.com</div>
+>>>>>>> issue:index.html
+~~~
+
+## Borrar ramas
+
+- Una vez fusionado la rama en el master, **conviene borrarla** (solo nos deja si está fusionada).
+
+~~~
+git branch -d nombre-rama
+~~~
+
+## Listado de ramas por estado
+
+- Podemos saber **que ramas están fusionada y cuales no**.
+
+~~~
+git branch --merged
+~~~
+
+~~~
+git branch --no-merged
+~~~
+
+## Sincronizar rama remota
+
+- Igual que sincronizamos la rama master remota, podemos **sincronizar otras ramas remotas**.
+
+~~~
+git checkout -b nombre-rama-local alias-repositorio-remoto/nombre-rama-remota
+~~~
+
+~~~
+git checkout -track alias-repositorio-remoto/nombre-rama-remota
+~~~
+
+## Asignar rama remota
+
+- Podemos **asignar el área de trabajo a una rama remota**.
+
+~~~
+git checkout -u alias-repositorio-remoto/nombre-rama-remota
+~~~
+
+## Listado de todas las ramas
+
+- Podemos listar no solo las ramas locales, sino **también las remotas**.
+
+~~~
+git checkout -vv
+~~~
+
+## Eliminar rama remota
+
+- Podemos **eliminar las ramas remotas**.
+
+~~~
+git push alias-repositorio-remoto --delete nombre-rama-remota
+~~~
 
 
 
@@ -426,11 +656,17 @@ Encabezado de segundo nivel
 
 
 
-##  gestionar equipos
+## Gestionar equipos
 
-##  pull-requests
+## Crear organizaciones
 
-##  git-pages
+## Pull-requests
+
+## Issues
+
+## Wiki
+
+## git-pages
 
 
 
@@ -440,8 +676,8 @@ Encabezado de segundo nivel
 
 ## ids
 
-##  tablas
+## tablas
 
-##  bloques (citas, código)
+## bloques (citas, código)
 
-##  enlaces e imágenes
+## enlaces e imágenes
