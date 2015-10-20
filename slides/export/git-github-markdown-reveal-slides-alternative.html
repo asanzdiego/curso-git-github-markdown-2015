@@ -11,6 +11,25 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="../lib/reveal.js-master/css/reveal.css">
+  <style type="text/css">
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; }
+code > span.dt { color: #902000; }
+code > span.dv { color: #40a070; }
+code > span.bn { color: #40a070; }
+code > span.fl { color: #40a070; }
+code > span.ch { color: #4070a0; }
+code > span.st { color: #4070a0; }
+code > span.co { color: #60a0b0; font-style: italic; }
+code > span.ot { color: #007020; }
+code > span.al { color: #ff0000; font-weight: bold; }
+code > span.fu { color: #06287e; }
+code > span.er { color: #ff0000; font-weight: bold; }
+  </style>
 	<!-- For syntax highlighting -->
 	<link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -657,27 +676,177 @@ Encabezado de segundo nivel
 </ul>
 <pre><code>git push alias-repositorio-remoto --delete nombre-rama-remota</code></pre>
 </section></section>
-<section><section id="uso-avanzado-de-github" class="titleslide slide level1"><h1><span class="header-section-number">10</span> Uso avanzado de GitHub</h1></section><section id="gestionar-equipos" class="slide level2">
-<h2><span class="header-section-number">10.1</span> Gestionar equipos</h2>
+<section><section id="uso-avanzado-de-github" class="titleslide slide level1"><h1><span class="header-section-number">10</span> Uso avanzado de GitHub</h1></section><section id="añadir-colaboradores" class="slide level2">
+<h2><span class="header-section-number">10.1</span> Añadir colaboradores</h2>
+<ul>
+<li>Podemos <strong>dar permisos de push</strong> a quien queramos.</li>
+</ul>
+<figure>
+<img src="../img/github-new-collaborator.png" alt="GitHub New Collaborator" /><figcaption>GitHub New Collaborator</figcaption>
+</figure>
 </section><section id="crear-organizaciones" class="slide level2">
 <h2><span class="header-section-number">10.2</span> Crear organizaciones</h2>
-</section><section id="pull-requests" class="slide level2">
-<h2><span class="header-section-number">10.3</span> Pull-requests</h2>
-</section><section id="issues" class="slide level2">
-<h2><span class="header-section-number">10.4</span> Issues</h2>
-</section><section id="wiki" class="slide level2">
-<h2><span class="header-section-number">10.5</span> Wiki</h2>
-</section><section id="git-pages" class="slide level2">
-<h2><span class="header-section-number">10.6</span> git-pages</h2>
+<ul>
+<li>Podemos <strong>crear organizaciones</strong>.</li>
+</ul>
+<figure>
+<img src="../img/github-new-organization.png" alt="GitHub New Organization" /><figcaption>GitHub New Organization</figcaption>
+</figure>
+</section><section id="gestionar-organizaciones" class="slide level2">
+<h2><span class="header-section-number">10.3</span> Gestionar organizaciones</h2>
+<ul>
+<li><p>Dentro de las organizaciones podemos <strong>crear equipos</strong> y/o trabajar con colaboradores externos.</p></li>
+<li><p>El <strong>nivel de permisos se gestiona a nivel de equipo</strong>.</p></li>
+<li><p>Las personas tendrán los permisos de los equipos a los que pertenezca.</p></li>
+</ul>
+</section><section id="forkear-proyectos" class="slide level2">
+<h2><span class="header-section-number">10.4</span> Forkear proyectos</h2>
+<ul>
+<li><p>Para <strong>participar en un proyecto sin permisos de escritura</strong>, puedes forkearlo.</p></li>
+<li><p>Consiste en crear una copia completa del repositorio bajo tu control: se encontrará <strong>en tu cuenta</strong> y podrás escribir en él sin limitaciones.</p></li>
+</ul>
+</section><section id="pull-requests-i" class="slide level2">
+<h2><span class="header-section-number">10.5</span> Pull-requests (I)</h2>
+<ul>
+<li><p>Para <strong>enviar propuestas de mejora</strong>.</p></li>
+<li><p>Se usa mucho para proyectos que no son tuyos y en donde te gustaría colaborar.</p></li>
+<li><p>También se usa dentro de equipos para gestionar proyectos grandes.</p></li>
+</ul>
+</section><section id="pull-requests-ii" class="slide level2">
+<h2><span class="header-section-number">10.6</span> Pull-requests (II)</h2>
+<ol type="1">
+<li>Crear un fork de proyecto.</li>
+<li>Clonar nuestro fork en nuestro equipo.</li>
+<li>Crear una rama que sea descriptiva.</li>
+<li>Realizar nuestros cambios.</li>
+<li>Comprobar los cambios.</li>
+<li>Enviar nuestra nueva rama de vuelta a nuestro fork.</li>
+</ol>
+</section><section id="pull-requests-ii-1" class="slide level2">
+<h2><span class="header-section-number">10.7</span> Pull-requests (II)</h2>
+<ol type="1">
+<li>Abrir un Pull Request en GitHub.</li>
+<li>Participa en la discusión asociada.</li>
+<li>Opcionalmente, se realizan nuevos commits.</li>
+<li>El propietario del proyecto original cierra el Pull Request
+<ul>
+<li>bien fusionando la rama con tus cambios</li>
+<li>o bien rechazándolos.</li>
+</ul></li>
+</ol>
+</section><section id="issues-y-wikis" class="slide level2">
+<h2><span class="header-section-number">10.8</span> Issues y Wikis</h2>
+<ul>
+<li>Todos los repositorios de GitHub tienen asociados:
+<ul>
+<li>un gestor de incidencias (issues)</li>
+<li>una wiki para documentar</li>
+</ul></li>
+</ul>
+</section><section id="github-pages-i" class="slide level2">
+<h2><span class="header-section-number">10.9</span> GitHub pages (I)</h2>
+<ul>
+<li>Podemos tener <strong>servidor web en los repositorios simplemente nombrandolos así</strong>:</li>
+</ul>
+<pre><code>usuario.github.io</code></pre>
+<pre><code>organizacion.github.io</code></pre>
+</section><section id="github-pages-i-1" class="slide level2">
+<h2><span class="header-section-number">10.10</span> GitHub pages (I)</h2>
+<ul>
+<li><p>También podemos hacer lo mismo con un determinado proyecto <strong>creando una rama gh-pages</strong>.</p></li>
+<li><p>Ver : <a href="https://pages.github.com/">https://pages.github.com/</a></p></li>
+</ul>
+</section><section id="fichero-readme.md" class="slide level2">
+<h2><span class="header-section-number">10.11</span> Fichero README.md</h2>
+<ul>
+<li>Nos <strong>lo muestra renderizado</strong> en la página del reposiorio.</li>
+</ul>
+</section><section id="webhooks-services" class="slide level2">
+<h2><span class="header-section-number">10.12</span> Webhooks &amp; services</h2>
+<ul>
+<li><p>Para que GitHub pueda <strong>interactúar con sistemas externos</strong>.</p></li>
+<li><p>Los servicios están ya medio configurados.</p></li>
+<li><p>Si necesitas algo más especifico lo tienes que hacer con webhooks, que lo que hace GitHub es hacer un POST a la URL que indiques cuando se lance algún evento (push, pull request, fork, etc.)</p></li>
+</ul>
 </section></section>
 <section><section id="sintaxis-avanzados-de-markdown" class="titleslide slide level1"><h1><span class="header-section-number">11</span> Sintaxis avanzados de Markdown</h1></section><section id="ids" class="slide level2">
 <h2><span class="header-section-number">11.1</span> ids</h2>
+<ul>
+<li><p>Lista con un ID {#id-de-la-lista}</p></li>
+<li><p><a href="#/id-de-la-lista">Ir a la lista</a></p></li>
+</ul>
+<pre><code>- Lista con un ID  {#id-de-la-lista}
+
+- [Ir a la lista](#id-de-la-lista)</code></pre>
 </section><section id="tablas" class="slide level2">
 <h2><span class="header-section-number">11.2</span> tablas</h2>
-</section><section id="bloques-citas-código" class="slide level2">
-<h2><span class="header-section-number">11.3</span> bloques (citas, código)</h2>
-</section><section id="enlaces-e-imágenes" class="slide level2">
-<h2><span class="header-section-number">11.4</span> enlaces e imágenes</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Header</th>
+<th style="text-align: left;">Header</th>
+<th style="text-align: right;">Right</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cell</td>
+<td style="text-align: left;">Cell</td>
+<td style="text-align: right;">$10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cell</td>
+<td style="text-align: left;">Cell</td>
+<td style="text-align: right;">$20</td>
+</tr>
+</tbody>
+</table>
+<pre><code>| Header | Header | Right  |
+| ------ | ------ | -----: |
+|  Cell  |  Cell  |   $10  |
+|  Cell  |  Cell  |   $20  |</code></pre>
+</section><section id="citas" class="slide level2">
+<h2><span class="header-section-number">11.3</span> Citas</h2>
+<blockquote>
+<p>&quot;No hay camino hacia el Software Libre, el Software Libre es el camino&quot;</p>
+</blockquote>
+<pre><code>&gt; &quot;No hay camino hacia el Software Libre,
+el Software Libre es el camino&quot;</code></pre>
+</section><section id="código" class="slide level2">
+<h2><span class="header-section-number">11.4</span> Código</h2>
+<pre class="sourceCode R"><code class="sourceCode r">require(maps<span class="er">)</span> <span class="co"># activación de librería</span>
+require(mapproj<span class="er">)</span> <span class="co"># se usará para projection=&quot;polyconic&quot;</span>
+  <span class="co"># Cargar los datos</span>
+  <span class="co"># unemp incluye datos para condados de los Estados Unidos continentales.</span>
+<span class="kw">data</span>(unemp) <span class="co"># Datos de desempleo</span>
+<span class="kw">data</span>(county.fips) <span class="co"># mapa de los condados</span></code></pre>
+<pre><code>require(maps) # activación de librería
+require(mapproj) # se usará para projection=&quot;polyconic&quot;
+  # Cargar los datos
+  # unemp incluye datos para condados de los Estados Unidos continentales.
+data(unemp) # Datos de desempleo
+data(county.fips) # mapa de los condados</code></pre>
+</section><section id="enlaces" class="slide level2">
+<h2><span class="header-section-number">11.5</span> Enlaces</h2>
+<ul>
+<li><p><a href="https://github.com/asanzdiego/curso-git-github-markdown-2015">Enlace con texto</a></p></li>
+<li><p>Enlace sencillo: -<a href="https://github.com/asanzdiego/curso-git-github-markdown-2015">https://github.com/asanzdiego/curso-git-github-markdown-2015</a></p></li>
+</ul>
+<pre><code>- [Enlace con texto](https://github.com/asanzdiego/curso-git-github-markdown-2015)
+
+- Enlace sencillo:
+    -&lt;https://github.com/asanzdiego/curso-git-github-markdown-2015&gt;</code></pre>
+</section><section id="imágenes" class="slide level2">
+<h2><span class="header-section-number">11.6</span> Imágenes</h2>
+<ul>
+<li>Este obra está bajo una licencia:</li>
+</ul>
+<figure>
+<img src="../img/cc-by-sa.png" alt="Creative Commons BY SA" /><figcaption>Creative Commons BY SA</figcaption>
+</figure>
+<pre><code>- Este obra está bajo una licencia:
+
+![Creative Commons BY SA](../img/cc-by-sa.png)</code></pre>
 </section></section>
     </div>
   </div>

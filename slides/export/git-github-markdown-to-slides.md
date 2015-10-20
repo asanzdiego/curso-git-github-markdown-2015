@@ -656,17 +656,96 @@ git push alias-repositorio-remoto --delete nombre-rama-remota
 
 
 
-## Gestionar equipos
+## Añadir colaboradores
+
+- Podemos **dar permisos de push** a quien queramos.
+
+![GitHub New Collaborator](../img/github-new-collaborator.png)
 
 ## Crear organizaciones
 
-## Pull-requests
+- Podemos **crear organizaciones**.
 
-## Issues
+![GitHub New Organization](../img/github-new-organization.png)
 
-## Wiki
+## Gestionar organizaciones
 
-## git-pages
+- Dentro de las organizaciones podemos **crear equipos** y/o trabajar con colaboradores externos.
+
+- El **nivel de permisos se gestiona a nivel de equipo**.
+
+- Las personas tendrán los permisos de los equipos a los que pertenezca.
+
+## Forkear proyectos
+
+- Para **participar en un proyecto sin permisos de escritura**, puedes forkearlo.
+
+- Consiste en crear una copia completa del repositorio bajo tu control:
+ se encontrará **en tu cuenta** y podrás escribir en él sin limitaciones.
+
+## Pull-requests (I)
+
+- Para **enviar propuestas de mejora**.
+
+- Se usa mucho para proyectos que no son tuyos y en donde te gustaría colaborar.
+
+- También se usa dentro de equipos para gestionar proyectos grandes.
+
+## Pull-requests (II)
+
+1. Crear un fork de proyecto.
+1. Clonar nuestro fork en nuestro equipo.
+1. Crear una rama que sea descriptiva.
+1. Realizar nuestros cambios.
+1. Comprobar los cambios.
+1. Enviar nuestra nueva rama de vuelta a nuestro fork.
+
+## Pull-requests (II)
+
+1. Abrir un Pull Request en GitHub.
+1. Participa en la discusión asociada.
+1. Opcionalmente, se realizan nuevos commits.
+1. El propietario del proyecto original cierra el Pull Request
+    - bien fusionando la rama con tus cambios
+    - o bien rechazándolos.
+
+## Issues y Wikis
+
+- Todos los repositorios de GitHub tienen asociados:
+    - un gestor de incidencias (issues)
+    - una wiki para documentar
+
+## GitHub pages (I)
+
+- Podemos tener **servidor web en los repositorios simplemente nombrandolos así**:
+
+~~~
+usuario.github.io
+~~~
+
+~~~
+organizacion.github.io
+~~~
+
+## GitHub pages (I)
+
+- También podemos hacer lo mismo con un determinado proyecto **creando una rama gh-pages**.
+
+- Ver : <https://pages.github.com/>
+
+## Fichero README.md
+
+- Nos **lo muestra renderizado** en la página del reposiorio.
+
+## Webhooks & services
+
+- Para que GitHub pueda **interactúar con sistemas externos**.
+
+- Los servicios están ya medio configurados.
+
+- Si necesitas algo más especifico lo tienes que hacer con webhooks,
+que lo que hace GitHub es hacer un POST a la URL que indiques
+cuando se lance algún evento (push, pull request, fork, etc.)
 
 
 
@@ -676,8 +755,82 @@ git push alias-repositorio-remoto --delete nombre-rama-remota
 
 ## ids
 
+- Lista con un ID  {#id-de-la-lista}
+
+- [Ir a la lista](#id-de-la-lista)
+
+~~~
+- Lista con un ID  {#id-de-la-lista}
+
+- [Ir a la lista](#id-de-la-lista)
+~~~
+
 ## tablas
 
-## bloques (citas, código)
+| Header | Header | Right  |
+| ------ | ------ | -----: |
+|  Cell  |  Cell  |   $10  |
+|  Cell  |  Cell  |   $20  |
 
-## enlaces e imágenes
+~~~
+| Header | Header | Right  |
+| ------ | ------ | -----: |
+|  Cell  |  Cell  |   $10  |
+|  Cell  |  Cell  |   $20  |
+~~~
+
+## Citas
+
+> "No hay camino hacia el Software Libre,
+el Software Libre es el camino"
+
+~~~
+> "No hay camino hacia el Software Libre,
+el Software Libre es el camino"
+~~~
+
+## Código
+
+~~~R
+require(maps) # activación de librería
+require(mapproj) # se usará para projection="polyconic"
+  # Cargar los datos
+  # unemp incluye datos para condados de los Estados Unidos continentales.
+data(unemp) # Datos de desempleo
+data(county.fips) # mapa de los condados
+~~~
+
+~~~
+require(maps) # activación de librería
+require(mapproj) # se usará para projection="polyconic"
+  # Cargar los datos
+  # unemp incluye datos para condados de los Estados Unidos continentales.
+data(unemp) # Datos de desempleo
+data(county.fips) # mapa de los condados
+~~~
+
+## Enlaces
+
+- [Enlace con texto](https://github.com/asanzdiego/curso-git-github-markdown-2015)
+
+- Enlace sencillo:
+    -<https://github.com/asanzdiego/curso-git-github-markdown-2015>
+
+~~~
+- [Enlace con texto](https://github.com/asanzdiego/curso-git-github-markdown-2015)
+
+- Enlace sencillo:
+    -<https://github.com/asanzdiego/curso-git-github-markdown-2015>
+~~~
+
+## Imágenes
+
+- Este obra está bajo una licencia:
+
+![Creative Commons BY SA](../img/cc-by-sa.png)
+
+~~~
+- Este obra está bajo una licencia:
+
+![Creative Commons BY SA](../img/cc-by-sa.png)
+~~~
