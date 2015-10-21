@@ -88,6 +88,9 @@ code > span.er { font-weight: bold; }
 <li><a href="#ignorar-archivos"><span class="toc-section-number">6.12</span> Ignorar archivos</a></li>
 <li><a href="#creando-etiquetas"><span class="toc-section-number">6.13</span> Creando etiquetas</a></li>
 <li><a href="#etiquetas-tardías"><span class="toc-section-number">6.14</span> Etiquetas tardías</a></li>
+<li><a href="#ver-una-etiqueta"><span class="toc-section-number">6.15</span> Ver una etiqueta</a></li>
+<li><a href="#sacar-una-etiqueta"><span class="toc-section-number">6.16</span> Sacar una etiqueta</a></li>
+<li><a href="#alias"><span class="toc-section-number">6.17</span> Alias</a></li>
 </ul></li>
 <li><a href="#uso-básico-de-github"><span class="toc-section-number">7</span> Uso básico de GitHub</a><ul>
 <li><a href="#configurar-claves"><span class="toc-section-number">7.1</span> Configurar claves</a></li>
@@ -137,7 +140,7 @@ code > span.er { font-weight: bold; }
 <li><a href="#fichero-readme.md"><span class="toc-section-number">10.9</span> Fichero README.md</a></li>
 <li><a href="#webhooks-services"><span class="toc-section-number">10.10</span> Webhooks &amp; services</a></li>
 </ul></li>
-<li><a href="#sintaxis-avanzados-de-markdown"><span class="toc-section-number">11</span> Sintaxis avanzados de Markdown</a><ul>
+<li><a href="#sintaxis-avanzado-de-markdown"><span class="toc-section-number">11</span> Sintaxis avanzado de Markdown</a><ul>
 <li><a href="#ids"><span class="toc-section-number">11.1</span> ids</a></li>
 <li><a href="#tablas"><span class="toc-section-number">11.2</span> tablas</a></li>
 <li><a href="#citas"><span class="toc-section-number">11.3</span> Citas</a></li>
@@ -417,6 +420,22 @@ code > span.er { font-weight: bold; }
 <li>Se puede crear una etiqueta <strong>conociendo el hash del commit</strong> (verlo con git log).</li>
 </ul>
 <pre><code>git tag -a nombre-etiqueta-anotada hash-del-commit</code></pre>
+<h2 id="ver-una-etiqueta"><span class="header-section-number">6.15</span> Ver una etiqueta</h2>
+<ul>
+<li>Podemos <strong>ver información concreta de una etiqueta</strong>.</li>
+</ul>
+<pre><code>git show nombre-etiqueta</code></pre>
+<h2 id="sacar-una-etiqueta"><span class="header-section-number">6.16</span> Sacar una etiqueta</h2>
+<ul>
+<li>No podemos sacar una etiqueta, pero podemos <strong>colocar en nuestro directorio de trabajo una versión que coincida con alguna etiqueta, creando una rama nueva</strong>:</li>
+</ul>
+<pre><code>git checkout -b nombre-rama nombre-etiqueta</code></pre>
+<h2 id="alias"><span class="header-section-number">6.17</span> Alias</h2>
+<ul>
+<li>Podemos crear <strong>alias</strong>.</li>
+</ul>
+<pre><code>git config --global alias.unstage &#39;reset HEAD --&#39;
+git config --global alias.list &#39;git log --oneline --decorate --graph --all&#39;</code></pre>
 <h1 id="uso-básico-de-github"><span class="header-section-number">7</span> Uso básico de GitHub</h1>
 <h2 id="configurar-claves"><span class="header-section-number">7.1</span> Configurar claves</h2>
 <ul>
@@ -708,7 +727,7 @@ Encabezado de segundo nivel
 <li><p>Los servicios están ya medio configurados.</p></li>
 <li><p>Si necesitas algo más especifico lo tienes que hacer con webhooks, que lo que hace GitHub es hacer un POST a la URL que indiques cuando se lance algún evento (push, pull request, fork, etc.)</p></li>
 </ul>
-<h1 id="sintaxis-avanzados-de-markdown"><span class="header-section-number">11</span> Sintaxis avanzados de Markdown</h1>
+<h1 id="sintaxis-avanzado-de-markdown"><span class="header-section-number">11</span> Sintaxis avanzado de Markdown</h1>
 <h2 id="ids"><span class="header-section-number">11.1</span> ids</h2>
 <ul>
 <li><p>Lista con un ID {#id-de-la-lista}</p></li>

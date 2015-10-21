@@ -425,6 +425,25 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li>Se puede crear una etiqueta <strong>conociendo el hash del commit</strong> (verlo con git log).</li>
 </ul>
 <pre><code>git tag -a nombre-etiqueta-anotada hash-del-commit</code></pre>
+</section><section id="ver-una-etiqueta" class="slide level2">
+<h2><span class="header-section-number">6.15</span> Ver una etiqueta</h2>
+<ul>
+<li>Podemos <strong>ver información concreta de una etiqueta</strong>.</li>
+</ul>
+<pre><code>git show nombre-etiqueta</code></pre>
+</section><section id="sacar-una-etiqueta" class="slide level2">
+<h2><span class="header-section-number">6.16</span> Sacar una etiqueta</h2>
+<ul>
+<li>No podemos sacar una etiqueta, pero podemos <strong>colocar en nuestro directorio de trabajo una versión que coincida con alguna etiqueta, creando una rama nueva</strong>:</li>
+</ul>
+<pre><code>git checkout -b nombre-rama nombre-etiqueta</code></pre>
+</section><section id="alias" class="slide level2">
+<h2><span class="header-section-number">6.17</span> Alias</h2>
+<ul>
+<li>Podemos crear <strong>alias</strong>.</li>
+</ul>
+<pre><code>git config --global alias.unstage &#39;reset HEAD --&#39;
+git config --global alias.list &#39;git log --oneline --decorate --graph --all&#39;</code></pre>
 </section></section>
 <section><section id="uso-básico-de-github" class="titleslide slide level1"><h1><span class="header-section-number">7</span> Uso básico de GitHub</h1></section><section id="configurar-claves-i" class="slide level2">
 <h2><span class="header-section-number">7.1</span> Configurar claves (I)</h2>
@@ -769,7 +788,7 @@ Encabezado de segundo nivel
 <li><p>Si necesitas algo más especifico lo tienes que hacer con webhooks, que lo que hace GitHub es hacer un POST a la URL que indiques cuando se lance algún evento (push, pull request, fork, etc.)</p></li>
 </ul>
 </section></section>
-<section><section id="sintaxis-avanzados-de-markdown" class="titleslide slide level1"><h1><span class="header-section-number">11</span> Sintaxis avanzados de Markdown</h1></section><section id="ids" class="slide level2">
+<section><section id="sintaxis-avanzado-de-markdown" class="titleslide slide level1"><h1><span class="header-section-number">11</span> Sintaxis avanzado de Markdown</h1></section><section id="ids" class="slide level2">
 <h2><span class="header-section-number">11.1</span> ids</h2>
 <ul>
 <li><p>Lista con un ID {#id-de-la-lista}</p></li>

@@ -335,6 +335,32 @@ git tag -a nombre-etiqueta-anotada -m "mensaje que acompaña a la etiqueta"
 git tag -a nombre-etiqueta-anotada hash-del-commit
 ~~~
 
+## Ver una etiqueta
+
+- Podemos **ver información concreta de una etiqueta**.
+
+~~~
+git show nombre-etiqueta
+~~~
+
+## Sacar una etiqueta
+
+- No podemos sacar una etiqueta, pero podemos **colocar en nuestro directorio
+de trabajo una versión que coincida con alguna etiqueta, creando una rama nueva**:
+
+~~~
+git checkout -b nombre-rama nombre-etiqueta
+~~~
+
+## Alias
+
+- Podemos crear **alias**.
+
+~~~
+git config --global alias.unstage 'reset HEAD --'
+git config --global alias.list 'git log --oneline --decorate --graph --all'
+~~~
+
 
 
 # Uso básico de GitHub
@@ -749,7 +775,7 @@ cuando se lance algún evento (push, pull request, fork, etc.)
 
 
 
-# Sintaxis avanzados de Markdown
+# Sintaxis avanzado de Markdown
 
 
 
