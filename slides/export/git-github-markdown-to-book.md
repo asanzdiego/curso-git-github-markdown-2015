@@ -90,7 +90,7 @@
 conjunto de archivos a lo largo del tiempo, de modo que
 puedas recuperar versiones específicas más adelante."
 
-- <https://git-scm.com/book/es/v1/Empezando-Acerca-del-control-de-versiones>
+- <https://git-scm.com/book/es/v2/Empezando-Acerca-del-control-de-versiones>
 
 ## VCS Locales
 
@@ -363,7 +363,7 @@ git checkout -b nombre-rama nombre-etiqueta
 
 ~~~
 git config --global alias.unstage 'reset HEAD --'
-git config --global alias.list 'git log --oneline --decorate --graph --all'
+git config --global alias.list 'log --oneline --decorate --graph --all'
 ~~~
 
 
@@ -673,7 +673,7 @@ git checkout -u alias-repositorio-remoto/nombre-rama-remota
 - Podemos listar no solo las ramas locales, sino **también las remotas**.
 
 ~~~
-git checkout -vv
+git branch -vv
 ~~~
 
 ## Eliminar rama remota
