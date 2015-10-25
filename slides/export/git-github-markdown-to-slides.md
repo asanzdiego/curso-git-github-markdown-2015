@@ -726,7 +726,7 @@ git push alias-repositorio-remoto --delete nombre-rama-remota
 1. Comprobar los cambios.
 1. Enviar nuestra nueva rama de vuelta a nuestro fork.
 
-## Pull-requests (II)
+## Pull-requests (III)
 
 1. Abrir un Pull Request en GitHub.
 1. Participa en la discusión asociada.

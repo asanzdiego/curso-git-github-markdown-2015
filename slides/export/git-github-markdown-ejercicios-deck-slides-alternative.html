@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" > <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" > <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" > <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="generator" content="pandoc" />
+  <meta name="description" content="Git, GitHub y Markdown" />
+  <meta name="author" content="Adolfo Sanz De Diego" />
+  <title>Git, GitHub y Markdown</title>
+
+  <!-- deck core css -->
+  <link rel="stylesheet" href="../lib/deck.js-master/core/deck.core.css">
+
+  <!-- deck extensions css -->
+  <link rel="stylesheet" href="../lib/deck.js-master/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/extensions/scale/deck.scale.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/extensions/status/deck.status.css">
+
+  <!-- deck slide theme css -->
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/style/swiss.css">
+  <!--
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/style/neon.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/style/swiss.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/style/web-2.0.css">
+  -->
+
+  <!-- deck slide transition css -->
+  <link rel="stylesheet" href="../lib/deck.js-transition-cube-master/cube.css">
+  <!--
+  <link rel="stylesheet" href="../lib/deck.js-transition-cube-master/cube.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/transition/fade.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/transition/horizontal-slide.css">
+  <link rel="stylesheet" href="../lib/deck.js-master/themes/transition/vertical-slide.css">
+  -->
+
+  <!-- custom css just for this page -->
+  <style>
+    figcaption {
+      display: none;
+      visibility:hidden;
+    }
+
+    #titlepage, #documentauthor, #documentdate {
+      text-align: center;
+    }
+
+    #titlepage {
+      font-size: 5.25em;
+      padding-top: 15%;
+    }
+
+    #documentauthor {
+      font-size: 2.25em;
+    }
+
+    #documentdate {
+      font-size: 1.25em;
+    }
+  </style>
+
+  <!-- modernizr deck js  -->
+  <script src="../lib/deck.js-master/modernizr.custom.js"></script>
+
+</head>
+<body class="deck-container">
+<section class="slide">
+  <h2 id="titlepage">Git, GitHub y Markdown</h2>
+  <h3 id="documentauthor">Adolfo Sanz De Diego</h3>
+  <h4 id="documentdate">Octubre 2015</h4>
+</section>
+
+<section id="acerca-de" class="titleslide slide level1"><h1><span class="header-section-number">1</span> Acerca de</h1></section><section id="autor" class="slide level2">
+<h2><span class="header-section-number">1.1</span> Autor</h2>
+<ul>
+<li><strong>Adolfo Sanz De Diego</strong>
+<ul>
+<li>Blog: <a href="http://asanzdiego.blogspot.com.es/">asanzdiego.blogspot.com.es</a></li>
+<li>Correo: <a href="mailto:asanzdiego@gmail.com">asanzdiego@gmail.com</a></li>
+<li>GitHub: <a href="http://github.com/asanzdiego">github.com/asanzdiego</a></li>
+<li>Twitter: <a href="http://twitter.com/asanzdiego">twitter.com/asanzdiego</a></li>
+<li>LinkedIn: <a href="http://www.linkedin.com/in/asanzdiego">in/asanzdiego</a></li>
+<li>SlideShare: <a href="http://www.slideshare.net/asanzdiego/">slideshare.net/asanzdiego</a></li>
+</ul></li>
+</ul>
+</section><section id="licencia" class="slide level2">
+<h2><span class="header-section-number">1.2</span> Licencia</h2>
+<ul>
+<li><strong>Este obra está bajo una licencia:</strong>
+<ul>
+<li><a href="http://creativecommons.org/licenses/by-sa/3.0/es/">Creative Commons Reconocimiento-CompartirIgual 3.0</a></li>
+</ul></li>
+</ul>
+</section><section id="fuente" class="slide level2">
+<h2><span class="header-section-number">1.3</span> Fuente</h2>
+<ul>
+<li>Las slides y sus fuentes las podéis encontrar en:
+<ul>
+<li><a href="https://github.com/asanzdiego/curso-git-github-markdown-2015">https://github.com/asanzdiego/curso-git-github-markdown-2015</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="ejercicios" class="titleslide slide level1"><h1><span class="header-section-number">2</span> Ejercicios</h1></section><section id="repositorio-campusciff" class="slide level2">
+<h2><span class="header-section-number">2.1</span> Repositorio campusciff</h2>
+<ol type="1">
+<li><p>Crear un repositorio en vuestro GitHub llamado <strong>campusciff</strong>.</p></li>
+<li><p>Clonar vuestro repositio en local.</p></li>
+</ol>
+</section><section id="readme" class="slide level2">
+<h2><span class="header-section-number">2.2</span> README</h2>
+<ol type="1">
+<li>Crear (si no lo habéis creado ya) en vuestro repositorio local un documento <strong>README.md</strong>.</li>
+</ol>
+<blockquote>
+<p>Notas: en este documento tendreís que ir poniendo los <strong>comandos</strong> que habéis tenido que utilizar durante todos los ejercicios y las <strong>explicaciones y capturas de pantalla</strong> que consideréis oportunas.</p>
+</blockquote>
+</section><section id="commit-y-push-inicial" class="slide level2">
+<h2><span class="header-section-number">2.3</span> Commit y push inicial</h2>
+<ol type="1">
+<li><p>Añadir los comanddos utilizados hasta ahora y hacer un coomit inicial con el mensaje <strong>commit inicial</strong>.</p></li>
+<li><p>Subir los cambios al repositorio remoto.</p></li>
+</ol>
+</section><section id="ignorar-archivos" class="slide level2">
+<h2><span class="header-section-number">2.4</span> Ignorar archivos</h2>
+<ol type="1">
+<li><p>Crear en el repositorio local un fichero llamado <strong>privado.txt</strong>.</p></li>
+<li><p>Crear en el repositorio local una carpeta llamada <strong>privada</strong>.</p></li>
+<li><p>Realizar los cambios oportunos para que tanto el archivo como legal como la carpeta sean ignorados por git.</p></li>
+</ol>
+</section><section id="crear-el-tag-v0.1" class="slide level2">
+<h2><span class="header-section-number">2.5</span> Crear el tag v0.1</h2>
+<ol type="1">
+<li><p>Añadir fichero <strong>1.txt</strong> al repositorio local.</p></li>
+<li><p>Crear un tag <strong>v0.1</strong>.</p></li>
+<li><p>Subir los cambios al repositorio remoto.</p></li>
+</ol>
+</section><section id="crear-una-rama-remota-v0.2" class="slide level2">
+<h2><span class="header-section-number">2.6</span> Crear una rama remota v0.2</h2>
+<ol type="1">
+<li><p>Crear una rama remota <strong>v0.2</strong>.</p></li>
+<li><p>Posiciona tu carpeta de trabajo en esta rama.</p></li>
+<li><p>Añadir un fichero <strong>2.txt</strong> en la rama <strong>v0.2</strong>.</p></li>
+<li><p>Subir los cambios al reposiorio remoto.</p></li>
+</ol>
+</section><section id="merge-directo" class="slide level2">
+<h2><span class="header-section-number">2.7</span> Merge directo</h2>
+<ol type="1">
+<li><p>Posicionarse en la rama <strong>master</strong>.</p></li>
+<li><p>Hacer un merge de la rama <strong>v0.2</strong> en la rama <strong>master</strong>.</p></li>
+</ol>
+</section><section id="merge-con-conflicto" class="slide level2">
+<h2><span class="header-section-number">2.8</span> Merge con conflicto</h2>
+<ol type="1">
+<li><p>En la rama <strong>master</strong> poner <strong>Hola</strong> en el fichero <strong>1.txt</strong> y hacer commit.</p></li>
+<li><p>Posicionarse en la rama <strong>v0.2</strong> y <strong>Adios</strong> en el fichero &quot;1.txt&quot; y hacer commit.</p></li>
+<li><p>Posicionarse de nuevo en la rama <strong>master</strong> y hacer un merge con la rama <strong>v0.2</strong></p></li>
+<li><p>Listar las ramas con merge y las ramas sin merge.</p></li>
+<li><p>Arreglar el conflicto anterior y hacer un commit.</p></li>
+</ol>
+</section><section id="borrar-rama" class="slide level2">
+<h2><span class="header-section-number">2.9</span> Borrar rama</h2>
+<ol type="1">
+<li><p>Crear un tag <strong>v0.2</strong></p></li>
+<li><p>Listar los distintos commits con sus ramas y sus tags.</p></li>
+<li><p>Borrar la rama <strong>v0.2</strong></p></li>
+</ol>
+</section><section id="cuenta-de-github" class="slide level2">
+<h2><span class="header-section-number">2.10</span> Cuenta de GitHub</h2>
+<ol type="1">
+<li><p>Poner una foto en vuestro perfil de GitHub.</p></li>
+<li><p>Poner el doble factor de autentificación en vuestra cuenta de GitHub.</p></li>
+<li><p>Añadir (si no lo habéis hecho ya) la clave pública que se corresponde a tu ordenador.</p></li>
+</ol>
+</section><section id="uso-social-de-github" class="slide level2">
+<h2><span class="header-section-number">2.11</span> Uso social de GitHub</h2>
+<ol type="1">
+<li><p>Preguntar los nombres de usuario de GitHub de tus compañeros de clase, búscalos, y sigueles.</p></li>
+<li><p>Seguir los repositorios <strong>campusciff</strong> del resto de tus compañeros.</p></li>
+<li><p>Añadir una estrella a los repositorios <strong>campusciff</strong> del resto de tus compañeros.</p></li>
+</ol>
+</section><section id="crear-una-tabla" class="slide level2">
+<h2><span class="header-section-number">2.12</span> Crear una tabla</h2>
+<ol type="1">
+<li>Crear una tabla de este estilo en el fichero <strong>README.md</strong> con la información de varios de tus compañeros de clase:</li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">NOMBRE</th>
+<th style="text-align: left;">GITHUB</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Nombre del compañero 1</td>
+<td style="text-align: left;"><a href="http://github.com/asanzdiego">enlace a github 1</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nombre del compañero 2</td>
+<td style="text-align: left;"><a href="http://github.com/asanzdiego">enlace a github 1</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nombre del compañero 3</td>
+<td style="text-align: left;"><a href="http://github.com/asanzdiego">enlace a github 3</a></td>
+</tr>
+</tbody>
+</table>
+</section><section id="colaboradores" class="slide level2">
+<h2><span class="header-section-number">2.13</span> Colaboradores</h2>
+<ol type="1">
+<li>Poner a <a href="http://github.com/asanzdiego">github.com/asanzdiego</a> como colaborador del repositorio <strong>campusciff</strong></li>
+</ol>
+</section><section id="crear-una-organización" class="slide level2">
+<h2><span class="header-section-number">2.14</span> Crear una organización</h2>
+<ol type="1">
+<li>Crear una organización llamada <strong>campusciff-tunombredeusuariodegithub</strong></li>
+</ol>
+</section><section id="crear-equipos" class="slide level2">
+<h2><span class="header-section-number">2.15</span> Crear equipos</h2>
+<ol type="1">
+<li><p>Crear 2 equipos en la organización <strong>campusciff-tunombredeusuariodegithub</strong>, uno llamado <strong>administradores</strong> con más permisos y otro <strong>colaboradores</strong> con menos permisos.</p></li>
+<li><p>Meter a <a href="http://github.com/asanzdiego">github.com/asanzdiego</a> y a 2 de vuestros compañeros de clase en el equipo <strong>administradores</strong>.</p></li>
+<li><p>Meter a <a href="http://github.com/asanzdiego">github.com/asanzdiego</a> y a otros 2 de vuestros compañeros de clase en el equipo <strong>colaboradores</strong>.</p></li>
+</ol>
+</section><section id="crear-un-index.html" class="slide level2">
+<h2><span class="header-section-number">2.16</span> Crear un index.html</h2>
+<ol type="1">
+<li>Crear un index.html que se pueda ver como página web en la organización.</li>
+</ol>
+</section><section id="crear-pull-requests" class="slide level2">
+<h2><span class="header-section-number">2.17</span> Crear Pull-requests</h2>
+<ol type="1">
+<li><p>Hacer 2 forks de 2 repositorios <strong>campusciff-tunombredeusuariodegithub.github.io</strong> de 2 organizaciones de las que no seais ni administradiores ni colaboradores.</p></li>
+<li><p>Crearos una rama en cada fork.</p></li>
+<li><p>En cada rama modificar el fichero <strong>index.html</strong> añadiendo vuestro nombre.</p></li>
+<li><p>Con cada rama hacer un pull-request.</p></li>
+</ol>
+</section><section id="gestionar-pull-requests" class="slide level2">
+<h2><span class="header-section-number">2.18</span> Gestionar Pull-requests</h2>
+<ol type="1">
+<li>Aceptar los pull-request que lleguen a los repositorios de tu organización.</li>
+</ol>
+</section>
+
+<!--footer id="footer">
+  <h4 class="author"> Adolfo Sanz De Diego  - Octubre 2015</h4>
+</footer-->
+
+<!-- deck goto extension html -->
+<form action="." method="get" class="goto-form">
+  <label for="goto-slide">Go to slide:</label>
+  <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+  <datalist id="goto-datalist"></datalist>
+  <input type="submit" value="Go">
+</form>
+
+<!-- deck navigation extension html -->
+<div aria-role="navigation">
+  <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+  <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+</div>
+
+<!-- deck status extension html -->
+<p class="deck-status" aria-role="status">
+  <span class="deck-status-current"></span>
+  /
+  <span class="deck-status-total"></span>
+</p>
+
+<!-- jquery  -->
+<script src="../lib/deck.js-master/jquery.min.js"></script>
+
+<!-- deck core js  -->
+<script src="../lib/deck.js-master/core/deck.core.js"></script>
+
+<!-- deck extension js -->
+<script src="../lib/deck.js-master/extensions/goto/deck.goto.js"></script>
+<script src="../lib/deck.js-master/extensions/menu/deck.menu.js"></script>
+<script src="../lib/deck.js-master/extensions/navigation/deck.navigation.js"></script>
+<script src="../lib/deck.js-master/extensions/scale/deck.scale.js"></script>
+<script src="../lib/deck.js-master/extensions/status/deck.status.js"></script>
+<!--script src="../lib/deck.search.js-master/search/deck.search.js"></script-->
+
+<!-- Initialize the deck. -->
+<script>
+$(function() {
+    $.deck('.slide');
+});
+</script>
+
+</body>
+</html>
