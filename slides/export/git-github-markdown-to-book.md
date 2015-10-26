@@ -58,25 +58,31 @@
     - Uso avanzado de GitHub
     - Sintaxis avanzada de Markdown
 
-## Enlaces de interés
+## Enlaces imprescindibles
 
-- Aprender GIT... y de camino GitHub:
-    - <https://github.com/oslugr/curso-git>
+- Pro GIT (sobretodo temas 1, 2, 3 y 6):
+    - <https://git-scm.com/book/es/v2>
 
 - Página oficial de Git:
     - <https://git-scm.com/>
-
-- Pro GIT:
-    - <https://git-scm.com/book/es/v2>
-
-- Minitutorial de GIT:
-    - <https://try.github.io/>
 
 - Página oficial de GitHub:
     - <https://github.com/>
 
 - Chuleta de la sintaxis de Markdown:
     - <http://warpedvisions.org/projects/markdown-cheat-sheet>
+
+## Otros enlaces de interés
+
+- Aprender GIT... y de camino GitHub:
+    - <https://github.com/oslugr/curso-git>
+
+
+- Minitutorial de GIT:
+    - <https://try.github.io/>
+
+- How GitHub Uses GitHub to Build GitHub
+    - <http://zachholman.com/talk/how-github-uses-github-to-build-github/>
 
 
 
@@ -508,7 +514,7 @@ git remote rename antiguo-alias nuevo-alias
 - Podemos **desconectar un reposiorio remoto**.
 
 ~~~
-git remove alias-repositorio-remoto
+git remote remove alias-repositorio-remoto
 ~~~
 
 ## Ver los repositorios remotos
