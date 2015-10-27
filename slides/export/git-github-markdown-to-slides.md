@@ -60,7 +60,7 @@
 
 ## Enlaces imprescindibles
 
-- Pro GIT (sobretodo temas 1, 2, 3 y 6):
+- Pro GIT (sobre todo temas 1, 2, 3 y 6):
     - <https://git-scm.com/book/es/v2>
 
 - Página oficial de Git:
@@ -77,13 +77,14 @@
 - Aprender GIT... y de camino GitHub:
     - <https://github.com/oslugr/curso-git>
 
-
 - Minitutorial de GIT:
     - <https://try.github.io/>
 
-- How GitHub Uses GitHub to Build GitHub
+- How GitHub Uses GitHub to Build GitHub:
     - <http://zachholman.com/talk/how-github-uses-github-to-build-github/>
 
+- MarkdownSlides:
+    - <https://github.com/asanzdiego/markdownslides>
 
 
 # Introducción a Git
