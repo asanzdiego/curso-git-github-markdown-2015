@@ -1,6 +1,6 @@
-% Git, GitHub y Markdown
+% DATA SCIENCE TOOLKIT
+% Ejercicios Git, GitHub y Markdown
 % Adolfo Sanz De Diego
-% Octubre 2015
 
 
 
@@ -131,8 +131,8 @@ y sigueles.
 1. Crear una tabla de este estilo en el fichero **README.md** con la información
 de varios de tus compañeros de clase:
 
-|        NOMBRE          |                     GITHUB                         |
-|------------------------|----------------------------------------------------|
+|        NOMBRE          |                     GITHUB                        |
+|------------------------|---------------------------------------------------|
 | Nombre del compañero 1 | [enlace a github 1](http://github.com/asanzdiego) |
 | Nombre del compañero 2 | [enlace a github 1](http://github.com/asanzdiego) |
 | Nombre del compañero 3 | [enlace a github 3](http://github.com/asanzdiego) |

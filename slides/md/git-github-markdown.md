@@ -1,6 +1,6 @@
+% DATA SCIENCE TOOLKIT
 % Git, GitHub y Markdown
 % Adolfo Sanz De Diego
-% Octubre 2015
 
 
 
