@@ -102,13 +102,13 @@ code > span.er { font-weight: bold; }
 <li><a href="#sintaxis-básica-de-markdown"><span class="toc-section-number">8</span> Sintaxis básica de Markdown</a><ul>
 <li><a href="#encabezados"><span class="toc-section-number">8.1</span> Encabezados</a></li>
 <li><a href="#listas-no-numeradas"><span class="toc-section-number">8.2</span> Listas no numeradas</a></li>
-<li><a href="#listas-no-numeradas-1"><span class="toc-section-number">8.3</span> Listas no numeradas</a></li>
+<li><a href="#listas-numeradas"><span class="toc-section-number">8.3</span> Listas numeradas</a></li>
 <li><a href="#formato-negrita-cursiva-tachado"><span class="toc-section-number">8.4</span> Formato (negrita, cursiva, tachado)</a></li>
 </ul></li>
 <li><a href="#uso-avanzado-de-git"><span class="toc-section-number">9</span> Uso avanzado de Git</a><ul>
 <li><a href="#conectar-un-repositorio-remoto"><span class="toc-section-number">9.1</span> Conectar un repositorio remoto</a></li>
 <li><a href="#renombrar-un-repositorio-remoto"><span class="toc-section-number">9.2</span> Renombrar un repositorio remoto</a></li>
-<li><a href="#desconecctar-un-repositorio-remoto"><span class="toc-section-number">9.3</span> Desconecctar un repositorio remoto</a></li>
+<li><a href="#desconectar-un-repositorio-remoto"><span class="toc-section-number">9.3</span> Desconectar un repositorio remoto</a></li>
 <li><a href="#ver-los-repositorios-remotos"><span class="toc-section-number">9.4</span> Ver los repositorios remotos</a></li>
 <li><a href="#descargar-cambios-remotos"><span class="toc-section-number">9.5</span> Descargar cambios remotos</a></li>
 <li><a href="#descargar-y-combinar"><span class="toc-section-number">9.6</span> Descargar y combinar</a></li>
@@ -142,12 +142,11 @@ code > span.er { font-weight: bold; }
 <li><a href="#webhooks-services"><span class="toc-section-number">10.10</span> Webhooks &amp; services</a></li>
 </ul></li>
 <li><a href="#sintaxis-avanzado-de-markdown"><span class="toc-section-number">11</span> Sintaxis avanzado de Markdown</a><ul>
-<li><a href="#ids"><span class="toc-section-number">11.1</span> ids</a></li>
-<li><a href="#tablas"><span class="toc-section-number">11.2</span> tablas</a></li>
-<li><a href="#citas"><span class="toc-section-number">11.3</span> Citas</a></li>
-<li><a href="#código"><span class="toc-section-number">11.4</span> Código</a></li>
-<li><a href="#enlaces"><span class="toc-section-number">11.5</span> Enlaces</a></li>
-<li><a href="#imágenes"><span class="toc-section-number">11.6</span> Imágenes</a></li>
+<li><a href="#tablas"><span class="toc-section-number">11.1</span> tablas</a></li>
+<li><a href="#citas"><span class="toc-section-number">11.2</span> Citas</a></li>
+<li><a href="#código"><span class="toc-section-number">11.3</span> Código</a></li>
+<li><a href="#enlaces"><span class="toc-section-number">11.4</span> Enlaces</a></li>
+<li><a href="#imágenes"><span class="toc-section-number">11.5</span> Imágenes</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -516,7 +515,7 @@ Encabezado de segundo nivel
 <pre><code>- se puede usar el menos
 * se puede usar el asterísico
 + se puede usar el más</code></pre>
-<h2 id="listas-no-numeradas-1"><span class="header-section-number">8.3</span> Listas no numeradas</h2>
+<h2 id="listas-numeradas"><span class="header-section-number">8.3</span> Listas numeradas</h2>
 <ul>
 <li>Enumeradas:
 <ol type="1">
@@ -548,7 +547,7 @@ Encabezado de segundo nivel
 <li>Podemos <strong>renombrar el alias de un reposiorio remoto</strong>.</li>
 </ul>
 <pre><code>git remote rename antiguo-alias nuevo-alias</code></pre>
-<h2 id="desconecctar-un-repositorio-remoto"><span class="header-section-number">9.3</span> Desconecctar un repositorio remoto</h2>
+<h2 id="desconectar-un-repositorio-remoto"><span class="header-section-number">9.3</span> Desconectar un repositorio remoto</h2>
 <ul>
 <li>Podemos <strong>desconectar un reposiorio remoto</strong>.</li>
 </ul>
@@ -586,7 +585,7 @@ Encabezado de segundo nivel
 <pre><code>git clone url-repositorio-remoto</code></pre>
 <h2 id="inspeccionar-repositorio-remoto"><span class="header-section-number">9.9</span> Inspeccionar repositorio remoto</h2>
 <ul>
-<li>Podemos ver <strong>información de un remoto particuar, y como están configurados pull y push</strong>.</li>
+<li>Podemos ver <strong>información de un remoto particular, y como están configurados pull y push</strong>.</li>
 </ul>
 <pre><code>git remote show alias-repositorio-remoto</code></pre>
 <h2 id="resumen-áreas"><span class="header-section-number">9.10</span> Resumen áreas</h2>
@@ -740,15 +739,7 @@ Encabezado de segundo nivel
 <li><p>Si necesitas algo más especifico lo tienes que hacer con webhooks, que lo que hace GitHub es hacer un POST a la URL que indiques cuando se lance algún evento (push, pull request, fork, etc.)</p></li>
 </ul>
 <h1 id="sintaxis-avanzado-de-markdown"><span class="header-section-number">11</span> Sintaxis avanzado de Markdown</h1>
-<h2 id="ids"><span class="header-section-number">11.1</span> ids</h2>
-<ul>
-<li><p>Lista con un ID {#id-de-la-lista}</p></li>
-<li><p><a href="#id-de-la-lista">Ir a la lista</a></p></li>
-</ul>
-<pre><code>- Lista con un ID  {#id-de-la-lista}
-
-- [Ir a la lista](#id-de-la-lista)</code></pre>
-<h2 id="tablas"><span class="header-section-number">11.2</span> tablas</h2>
+<h2 id="tablas"><span class="header-section-number">11.1</span> tablas</h2>
 <table>
 <thead>
 <tr class="header">
@@ -774,13 +765,13 @@ Encabezado de segundo nivel
 | ------ | ------ | -----: |
 |  Cell  |  Cell  |   $10  |
 |  Cell  |  Cell  |   $20  |</code></pre>
-<h2 id="citas"><span class="header-section-number">11.3</span> Citas</h2>
+<h2 id="citas"><span class="header-section-number">11.2</span> Citas</h2>
 <blockquote>
 <p>&quot;No hay camino hacia el Software Libre, el Software Libre es el camino&quot;</p>
 </blockquote>
 <pre><code>&gt; &quot;No hay camino hacia el Software Libre,
 el Software Libre es el camino&quot;</code></pre>
-<h2 id="código"><span class="header-section-number">11.4</span> Código</h2>
+<h2 id="código"><span class="header-section-number">11.3</span> Código</h2>
 <pre class="sourceCode R"><code class="sourceCode r">require(maps<span class="er">)</span> <span class="co"># activación de librería</span>
 require(mapproj<span class="er">)</span> <span class="co"># se usará para projection=&quot;polyconic&quot;</span>
   <span class="co"># Cargar los datos</span>
@@ -793,7 +784,7 @@ require(mapproj) # se usará para projection=&quot;polyconic&quot;
   # unemp incluye datos para condados de los Estados Unidos continentales.
 data(unemp) # Datos de desempleo
 data(county.fips) # mapa de los condados</code></pre>
-<h2 id="enlaces"><span class="header-section-number">11.5</span> Enlaces</h2>
+<h2 id="enlaces"><span class="header-section-number">11.4</span> Enlaces</h2>
 <ul>
 <li><p><a href="https://github.com/asanzdiego/curso-git-github-markdown-2015">Enlace con texto</a></p></li>
 <li><p>Enlace sencillo: -<a href="https://github.com/asanzdiego/curso-git-github-markdown-2015">https://github.com/asanzdiego/curso-git-github-markdown-2015</a></p></li>
@@ -802,7 +793,7 @@ data(county.fips) # mapa de los condados</code></pre>
 
 - Enlace sencillo:
     -&lt;https://github.com/asanzdiego/curso-git-github-markdown-2015&gt;</code></pre>
-<h2 id="imágenes"><span class="header-section-number">11.6</span> Imágenes</h2>
+<h2 id="imágenes"><span class="header-section-number">11.5</span> Imágenes</h2>
 <ul>
 <li>Este obra está bajo una licencia:</li>
 </ul>

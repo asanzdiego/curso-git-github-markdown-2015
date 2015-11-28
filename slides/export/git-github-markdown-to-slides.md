@@ -456,7 +456,7 @@ Encabezado de segundo nivel
 + se puede usar el más
 ~~~
 
-##  Listas no numeradas
+##  Listas numeradas
 
 - Enumeradas:
     1. Primer elemento
@@ -503,7 +503,7 @@ git remote add alias-repositorio-remoto url-repositorio-remoto
 git remote rename antiguo-alias nuevo-alias
 ~~~
 
-## Desconecctar un repositorio remoto
+## Desconectar un repositorio remoto
 
 - Podemos **desconectar un reposiorio remoto**.
 
@@ -557,7 +557,7 @@ git clone url-repositorio-remoto
 
 ## Inspeccionar repositorio remoto
 
-- Podemos ver **información de un remoto particuar, y como están configurados pull y push**.
+- Podemos ver **información de un remoto particular, y como están configurados pull y push**.
 
 ~~~
 git remote show alias-repositorio-remoto
@@ -785,18 +785,6 @@ cuando se lance algún evento (push, pull request, fork, etc.)
 # Sintaxis avanzado de Markdown
 
 
-
-## ids
-
-- Lista con un ID  {#id-de-la-lista}
-
-- [Ir a la lista](#id-de-la-lista)
-
-~~~
-- Lista con un ID  {#id-de-la-lista}
-
-- [Ir a la lista](#id-de-la-lista)
-~~~
 
 ## tablas
 

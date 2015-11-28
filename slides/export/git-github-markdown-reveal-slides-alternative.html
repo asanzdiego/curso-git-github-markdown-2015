@@ -536,8 +536,8 @@ Encabezado de segundo nivel
 <pre><code>- se puede usar el menos
 * se puede usar el asterísico
 + se puede usar el más</code></pre>
-</section><section id="listas-no-numeradas-1" class="slide level2">
-<h2><span class="header-section-number">8.4</span> Listas no numeradas</h2>
+</section><section id="listas-numeradas" class="slide level2">
+<h2><span class="header-section-number">8.4</span> Listas numeradas</h2>
 <ul>
 <li>Enumeradas:
 <ol type="1">
@@ -572,8 +572,8 @@ Encabezado de segundo nivel
 <li>Podemos <strong>renombrar el alias de un reposiorio remoto</strong>.</li>
 </ul>
 <pre><code>git remote rename antiguo-alias nuevo-alias</code></pre>
-</section><section id="desconecctar-un-repositorio-remoto" class="slide level2">
-<h2><span class="header-section-number">9.3</span> Desconecctar un repositorio remoto</h2>
+</section><section id="desconectar-un-repositorio-remoto" class="slide level2">
+<h2><span class="header-section-number">9.3</span> Desconectar un repositorio remoto</h2>
 <ul>
 <li>Podemos <strong>desconectar un reposiorio remoto</strong>.</li>
 </ul>
@@ -617,7 +617,7 @@ Encabezado de segundo nivel
 </section><section id="inspeccionar-repositorio-remoto" class="slide level2">
 <h2><span class="header-section-number">9.9</span> Inspeccionar repositorio remoto</h2>
 <ul>
-<li>Podemos ver <strong>información de un remoto particuar, y como están configurados pull y push</strong>.</li>
+<li>Podemos ver <strong>información de un remoto particular, y como están configurados pull y push</strong>.</li>
 </ul>
 <pre><code>git remote show alias-repositorio-remoto</code></pre>
 </section><section id="resumen-áreas" class="slide level2">
@@ -800,17 +800,8 @@ Encabezado de segundo nivel
 <li><p>Si necesitas algo más especifico lo tienes que hacer con webhooks, que lo que hace GitHub es hacer un POST a la URL que indiques cuando se lance algún evento (push, pull request, fork, etc.)</p></li>
 </ul>
 </section></section>
-<section><section id="sintaxis-avanzado-de-markdown" class="titleslide slide level1"><h1><span class="header-section-number">11</span> Sintaxis avanzado de Markdown</h1></section><section id="ids" class="slide level2">
-<h2><span class="header-section-number">11.1</span> ids</h2>
-<ul>
-<li><p>Lista con un ID {#id-de-la-lista}</p></li>
-<li><p><a href="#/id-de-la-lista">Ir a la lista</a></p></li>
-</ul>
-<pre><code>- Lista con un ID  {#id-de-la-lista}
-
-- [Ir a la lista](#id-de-la-lista)</code></pre>
-</section><section id="tablas" class="slide level2">
-<h2><span class="header-section-number">11.2</span> tablas</h2>
+<section><section id="sintaxis-avanzado-de-markdown" class="titleslide slide level1"><h1><span class="header-section-number">11</span> Sintaxis avanzado de Markdown</h1></section><section id="tablas" class="slide level2">
+<h2><span class="header-section-number">11.1</span> tablas</h2>
 <table>
 <thead>
 <tr class="header">
@@ -837,14 +828,14 @@ Encabezado de segundo nivel
 |  Cell  |  Cell  |   $10  |
 |  Cell  |  Cell  |   $20  |</code></pre>
 </section><section id="citas" class="slide level2">
-<h2><span class="header-section-number">11.3</span> Citas</h2>
+<h2><span class="header-section-number">11.2</span> Citas</h2>
 <blockquote>
 <p>&quot;No hay camino hacia el Software Libre, el Software Libre es el camino&quot;</p>
 </blockquote>
 <pre><code>&gt; &quot;No hay camino hacia el Software Libre,
 el Software Libre es el camino&quot;</code></pre>
 </section><section id="código" class="slide level2">
-<h2><span class="header-section-number">11.4</span> Código</h2>
+<h2><span class="header-section-number">11.3</span> Código</h2>
 <pre class="sourceCode R"><code class="sourceCode r">require(maps<span class="er">)</span> <span class="co"># activación de librería</span>
 require(mapproj<span class="er">)</span> <span class="co"># se usará para projection=&quot;polyconic&quot;</span>
   <span class="co"># Cargar los datos</span>
@@ -858,7 +849,7 @@ require(mapproj) # se usará para projection=&quot;polyconic&quot;
 data(unemp) # Datos de desempleo
 data(county.fips) # mapa de los condados</code></pre>
 </section><section id="enlaces" class="slide level2">
-<h2><span class="header-section-number">11.5</span> Enlaces</h2>
+<h2><span class="header-section-number">11.4</span> Enlaces</h2>
 <ul>
 <li><p><a href="https://github.com/asanzdiego/curso-git-github-markdown-2015">Enlace con texto</a></p></li>
 <li><p>Enlace sencillo: -<a href="https://github.com/asanzdiego/curso-git-github-markdown-2015">https://github.com/asanzdiego/curso-git-github-markdown-2015</a></p></li>
@@ -868,7 +859,7 @@ data(county.fips) # mapa de los condados</code></pre>
 - Enlace sencillo:
     -&lt;https://github.com/asanzdiego/curso-git-github-markdown-2015&gt;</code></pre>
 </section><section id="imágenes" class="slide level2">
-<h2><span class="header-section-number">11.6</span> Imágenes</h2>
+<h2><span class="header-section-number">11.5</span> Imágenes</h2>
 <ul>
 <li>Este obra está bajo una licencia:</li>
 </ul>
