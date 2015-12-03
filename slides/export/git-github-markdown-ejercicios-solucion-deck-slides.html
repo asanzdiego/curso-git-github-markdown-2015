@@ -8,9 +8,9 @@
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="generator" content="pandoc" />
-  <meta name="description" content="Ejercicios Git, GitHub y Markdown" />
+  <meta name="description" content="Solución ej. Git, GitHub y Markdown" />
   <meta name="author" content="Adolfo Sanz De Diego" />
-  <title>Ejercicios Git, GitHub y Markdown</title>
+  <title>Solución ej. Git, GitHub y Markdown</title>
 
   <!-- deck core css -->
   <link rel="stylesheet" href="../lib/deck.js-master/core/deck.core.css">
@@ -70,7 +70,7 @@
 </head>
 <body class="deck-container">
 <section class="slide">
-  <h2 id="titlepage">Ejercicios Git, GitHub y Markdown</h2>
+  <h2 id="titlepage">Solución ej. Git, GitHub y Markdown</h2>
   <h3 id="documentauthor">Adolfo Sanz De Diego</h3>
   <h4 id="documentdate">Diciembre 2015</h4>
 </section>
@@ -110,11 +110,15 @@
 <ol type="1">
 <li>Crear un repositorio en vuestro GitHub llamado <strong>campusciff</strong>.</li>
 </ol>
+<figure>
+<img src="../img/github-new-repo.png" alt="Crear un repositorio" /><figcaption>Crear un repositorio</figcaption>
+</figure>
 </section><section id="repositorio-campusciff-ii" class="slide level2">
 <h2><span class="header-section-number">2.2</span> Repositorio campusciff (II)</h2>
 <ol type="1">
 <li>Clonar vuestro repositio en local.</li>
 </ol>
+<pre><code>git clone git@github.com:asanzdiego/campusciff.git</code></pre>
 </section><section id="readme" class="slide level2">
 <h2><span class="header-section-number">2.3</span> README</h2>
 <ol type="1">
@@ -128,32 +132,47 @@
 <ol type="1">
 <li>Añadir al README.md los comanddos utilizados hasta ahora y hacer un coomit inicial con el mensaje <strong>commit inicial</strong>.</li>
 </ol>
+<pre><code>git add .
+git commit -m &quot;commit inicial&quot;</code></pre>
 </section><section id="push-inicial" class="slide level2">
 <h2><span class="header-section-number">2.5</span> Push inicial</h2>
 <ol type="1">
 <li>Subir los cambios al repositorio remoto.</li>
 </ol>
+<pre><code>git push origin master</code></pre>
 </section><section id="ignorar-archivos-i" class="slide level2">
 <h2><span class="header-section-number">2.6</span> Ignorar archivos (I)</h2>
 <ol type="1">
-<li><p>Crear en el repositorio local un fichero llamado <strong>privado.txt</strong>.</p></li>
-<li><p>Crear en el repositorio local una carpeta llamada <strong>privada</strong>.</p></li>
+<li>Crear en el repositorio local un fichero llamado <strong>privado.txt</strong>.</li>
 </ol>
+<pre><code>touch privado.txt</code></pre>
+<ol type="1">
+<li>Crear en el repositorio local una carpeta llamada <strong>privada</strong>.</li>
+</ol>
+<pre><code>mkdir privada</code></pre>
 </section><section id="ignorar-archivos-ii" class="slide level2">
 <h2><span class="header-section-number">2.7</span> Ignorar archivos (II)</h2>
 <ol type="1">
 <li>Realizar los cambios oportunos para que tanto el archivo como la carpeta sean ignorados por git.</li>
 </ol>
+<pre><code>echo &quot;privado.txt&quot; &gt; .gitignore
+echo &quot;/privada&quot; &gt; .gitignore
+git add .
+git commit -m &quot;añadido fichero .gitignore&quot;</code></pre>
 </section><section id="añadir-fichero-1.txt" class="slide level2">
 <h2><span class="header-section-number">2.8</span> Añadir fichero 1.txt</h2>
 <ol type="1">
 <li>Añadir fichero <strong>1.txt</strong> al repositorio local.</li>
 </ol>
+<pre><code>touch 1.txt
+git add .
+git commit -m &quot;añadido 1.txt&quot;</code></pre>
 </section><section id="crear-el-tag-v0.1" class="slide level2">
 <h2><span class="header-section-number">2.9</span> Crear el tag v0.1</h2>
 <ol type="1">
 <li>Crear un tag <strong>v0.1</strong>.</li>
 </ol>
+<pre><code>git tag v0.1</code></pre>
 </section><section id="subir-el-tag-v0.1" class="slide level2">
 <h2><span class="header-section-number">2.10</span> Subir el tag v0.1</h2>
 <ol type="1">
@@ -163,61 +182,97 @@
 </section><section id="crear-una-rama-v0.2" class="slide level2">
 <h2><span class="header-section-number">2.11</span> Crear una rama v0.2</h2>
 <ol type="1">
-<li><p>Crear una rama <strong>v0.2</strong>.</p></li>
-<li><p>Posiciona tu carpeta de trabajo en esta rama.</p></li>
+<li>Crear una rama <strong>v0.2</strong>.</li>
 </ol>
+<pre><code>git branch v0.2</code></pre>
+<ol type="1">
+<li>Posiciona tu carpeta de trabajo en esta rama.</li>
+</ol>
+<pre><code>git checkout v0.2</code></pre>
 </section><section id="añadir-fichero-1.txt-1" class="slide level2">
 <h2><span class="header-section-number">2.12</span> Añadir fichero 1.txt</h2>
 <ol type="1">
 <li>Añadir un fichero <strong>2.txt</strong> en la rama <strong>v0.2</strong>.</li>
 </ol>
+<pre><code>touch 2.txt
+git add .
+git commit -m &quot;añadido 2.txt&quot;</code></pre>
 </section><section id="crear-rama-remota-v0.2" class="slide level2">
 <h2><span class="header-section-number">2.13</span> Crear rama remota v0.2</h2>
 <ol type="1">
 <li>Subir los cambios al reposiorio remoto.</li>
 </ol>
+<pre><code>git push origin v0.2</code></pre>
 </section><section id="merge-directo" class="slide level2">
 <h2><span class="header-section-number">2.14</span> Merge directo</h2>
 <ol type="1">
-<li><p>Posicionarse en la rama <strong>master</strong>.</p></li>
-<li><p>Hacer un merge de la rama <strong>v0.2</strong> en la rama <strong>master</strong>.</p></li>
+<li>Posicionarse en la rama <strong>master</strong>.</li>
 </ol>
+<pre><code>git checkout master</code></pre>
+<ol type="1">
+<li>Hacer un merge de la rama <strong>v0.2</strong> en la rama <strong>master</strong>.</li>
+</ol>
+<pre><code>git merge v0.2 -m &quot;merge v0.2 sin conflictos&quot;</code></pre>
 </section><section id="merge-con-conflicto-i" class="slide level2">
 <h2><span class="header-section-number">2.15</span> Merge con conflicto (I)</h2>
 <ol type="1">
 <li>En la rama <strong>master</strong> poner <strong>Hola</strong> en el fichero <strong>1.txt</strong> y hacer commit.</li>
 </ol>
+<pre><code>git checkout master
+echo &quot;Hola&quot; &gt;&gt; 1.txt
+git add .
+git commit -m &quot;hola en 1.txt&quot;</code></pre>
 </section><section id="merge-con-conflicto-ii" class="slide level2">
 <h2><span class="header-section-number">2.16</span> Merge con conflicto (II)</h2>
 <ol type="1">
 <li>Posicionarse en la rama <strong>v0.2</strong> y poner <strong>Adios</strong> en el fichero &quot;1.txt&quot; y hacer commit.</li>
 </ol>
+<pre><code>git checkout v0.2
+echo &quot;Adios&quot; &gt;&gt; 1.txt
+git add .
+git commit -m &quot;adios en 1.txt&quot;</code></pre>
 </section><section id="merge-con-conflicto-iii" class="slide level2">
 <h2><span class="header-section-number">2.17</span> Merge con conflicto (III)</h2>
 <ol type="1">
 <li>Posicionarse de nuevo en la rama <strong>master</strong> y hacer un merge con la rama <strong>v0.2</strong></li>
 </ol>
+<pre><code>git checkout master
+git merge v0.2
+vim 1.txt
+git add .
+git commit -m &quot;arreglado merge en 1.txt&quot;</code></pre>
 </section><section id="listado-de-ramas" class="slide level2">
 <h2><span class="header-section-number">2.18</span> Listado de ramas</h2>
 <ol type="1">
 <li>Listar las ramas con merge y las ramas sin merge.</li>
 </ol>
+<pre><code>git branch --merged
+git branch --no-merged</code></pre>
 </section><section id="arreglar-conflicto" class="slide level2">
 <h2><span class="header-section-number">2.19</span> Arreglar conflicto</h2>
 <ol type="1">
 <li>Arreglar el conflicto anterior y hacer un commit.</li>
 </ol>
+<pre><code>vim 1.txt
+git add .
+git commit -m &quot;arreglado merge en 1.txt&quot;</code></pre>
 </section><section id="borrar-rama" class="slide level2">
 <h2><span class="header-section-number">2.20</span> Borrar rama</h2>
 <ol type="1">
-<li><p>Crear un tag <strong>v0.2</strong></p></li>
-<li><p>Borrar la rama <strong>v0.2</strong></p></li>
+<li>Crear un tag <strong>v0.2</strong></li>
 </ol>
+<pre><code>git tag v0.2</code></pre>
+<ol type="1">
+<li>Borrar la rama <strong>v0.2</strong></li>
+</ol>
+<pre><code>git branch -d v0.2</code></pre>
 </section><section id="listado-de-cambios" class="slide level2">
 <h2><span class="header-section-number">2.21</span> Listado de cambios</h2>
 <ol type="1">
 <li>Listar los distintos commits con sus ramas y sus tags.</li>
 </ol>
+<pre><code>git config --global alias.list &#39;log --oneline --decorate --graph --all&#39;
+git list</code></pre>
 </section><section id="cuenta-de-github" class="slide level2">
 <h2><span class="header-section-number">2.22</span> Cuenta de GitHub</h2>
 <ol type="1">

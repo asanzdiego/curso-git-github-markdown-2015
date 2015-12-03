@@ -1,6 +1,6 @@
-% DATA SCIENCE TOOLKIT
 % Ejercicios Git, GitHub y Markdown
 % Adolfo Sanz De Diego
+% Diciembre 2015
 
 
 
@@ -34,9 +34,11 @@
 
 
 
-## Repositorio campusciff
+## Repositorio campusciff (I)
 
 1. Crear un repositorio en vuestro GitHub llamado **campusciff**.
+
+## Repositorio campusciff (II)
 
 1. Clonar vuestro repositio en local.
 
@@ -45,41 +47,59 @@
 1. Crear (si no lo habéis creado ya) en vuestro repositorio local
 un documento **README.md**.
 
-> Notas: en este documento tendreís que ir poniendo los **comandos** que habéis
-> tenido que utilizar durante todos los ejercicios
-> y las **explicaciones y capturas de pantalla** que consideréis oportunas.
+> Notas: en este documento tendreís que ir poniendo los **comandos**
+> que habéis tenido que utilizar durante todos los ejercicios
+> y las **explicaciones y capturas de pantalla** que consideréis **necesarias**.
 
-## Commit y push inicial
+## Commit inicial
 
-1. Añadir los comanddos utilizados hasta ahora y hacer un coomit inicial
-con el mensaje **commit inicial**.
+1. Añadir al README.md los comanddos utilizados hasta ahora
+y hacer un coomit inicial con el mensaje **commit inicial**.
+
+
+## Push inicial
 
 1. Subir los cambios al repositorio remoto.
 
-## Ignorar archivos
+## Ignorar archivos (I)
 
 1. Crear en el repositorio local un fichero llamado **privado.txt**.
 
 1. Crear en el repositorio local una carpeta llamada **privada**.
 
-1. Realizar los cambios oportunos para que tanto el archivo como legal como
+## Ignorar archivos (II)
+
+1. Realizar los cambios oportunos para que tanto el archivo como
 la carpeta sean ignorados por git.
 
-## Crear el tag v0.1
+## Añadir fichero 1.txt
 
 1. Añadir fichero **1.txt** al repositorio local.
 
+## Crear el tag v0.1
+
 1. Crear un tag **v0.1**.
+
+## Subir el tag v0.1
 
 1. Subir los cambios al repositorio remoto.
 
-## Crear una rama remota v0.2
+~~~
+git push --tag origin master
+~~~
 
-1. Crear una rama remota **v0.2**.
+## Crear una rama v0.2
+
+1. Crear una rama **v0.2**.
 
 1. Posiciona tu carpeta de trabajo en esta rama.
 
+## Añadir fichero 1.txt
+
 1. Añadir un fichero **2.txt** en la rama **v0.2**.
+
+
+## Crear rama remota v0.2
 
 1. Subir los cambios al reposiorio remoto.
 
@@ -89,15 +109,24 @@ la carpeta sean ignorados por git.
 
 1. Hacer un merge de la rama **v0.2** en la rama **master**.
 
-## Merge con conflicto
+## Merge con conflicto (I)
 
 1. En la rama **master** poner **Hola** en el fichero **1.txt** y hacer commit.
 
-1. Posicionarse en la rama **v0.2** y **Adios** en el fichero "1.txt" y hacer commit.
+## Merge con conflicto (II)
+
+1. Posicionarse en la rama **v0.2** y poner **Adios** en el fichero "1.txt" y hacer commit.
+
+## Merge con conflicto (III)
 
 1. Posicionarse de nuevo en la rama **master** y hacer un merge con la rama **v0.2**
 
+## Listado de ramas
+
 1. Listar las ramas con merge y las ramas sin merge.
+
+
+## Arreglar conflicto
 
 1. Arreglar el conflicto anterior y hacer un commit.
 
@@ -105,9 +134,13 @@ la carpeta sean ignorados por git.
 
 1. Crear un tag **v0.2**
 
-1. Listar los distintos commits con sus ramas y sus tags.
 
 1. Borrar la rama **v0.2**
+
+
+## Listado de cambios
+
+1. Listar los distintos commits con sus ramas y sus tags.
 
 ## Cuenta de GitHub
 
@@ -119,8 +152,7 @@ la carpeta sean ignorados por git.
 
 ## Uso social de GitHub
 
-1. Preguntar los nombres de usuario de GitHub de tus compañeros de clase, búscalos,
-y sigueles.
+1. Preguntar los nombres de usuario de GitHub de tus compañeros de clase, búscalos, y sigueles.
 
 1. Seguir los repositorios **campusciff** del resto de tus compañeros.
 

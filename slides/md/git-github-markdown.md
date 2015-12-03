@@ -1,6 +1,6 @@
-% DATA SCIENCE TOOLKIT
 % Git, GitHub y Markdown
 % Adolfo Sanz De Diego
+% Diciembre 2015
 
 
 
@@ -46,17 +46,11 @@
 ## Indice
 
 - **Bloque 1**
-    - Introducción a Git
-    - Introducción a GitHub
-    - Introducción Markdown
+    - Uso básico de Git y GitHub
 - **Bloque 2**
-    - Uso básico de Git
-    - Uso básico de GitHub
-    - Sintaxis básica de Markdown
+    - Uso avanzado de Git y GitHub
 - **Bloque 3**
-    - Uso avanzado de Git
-    - Uso avanzado de GitHub
-    - Sintaxis avanzada de Markdown
+    - Markdown
 
 ## Enlaces imprescindibles
 
@@ -80,6 +74,9 @@
 - Minitutorial de GIT:
     - <https://try.github.io/>
 
+- Tutorial de GIT de codecademy;
+    - <https://www.codecademy.com/learn/learn-git>
+
 - How GitHub Uses GitHub to Build GitHub:
     - <http://zachholman.com/talk/how-github-uses-github-to-build-github/>
 
@@ -87,7 +84,8 @@
     - <https://github.com/asanzdiego/markdownslides>
 
 
-# Introducción a Git
+
+# Uso básico de Git
 
 
 
@@ -163,72 +161,13 @@ git config --global user.name "Nombre que quieras mostrar"
 git config --global user.email "correo@electronico.es"
 ~~~
 
+## SmartGit
 
+- GUI multiplataforma.
 
-# Introducción a GitHub
+- Gratis para uso no comercial.
 
-
-
-##  Características de GitHub
-
-- **Plataforma de desarrollo colaborativo**, que utiliza Git.
-
-- Los **repositorios son públicos**, salvo con cuenta de pago.
-
-- Tiene facetas de **red social** (perfil público, seguidores, estrellas, etc.)
-
-- Nos permite **gestionar organizaciones y equipos**.
-
-- **Gestión de proyectos** (wiki, releases, incidencias, gráficos, etc.)
-
-- **Servidor web**.
-
-##  Crear cuenta
-
-![Crear cuenta en GitHub](../img/github-signup.png)
-
-##  Crear repositorio
-
-![Crear un repositorio](../img/github-new-repo.png)
-
-
-
-# Introducción Markdown
-
-
-
-##  Qué es Markdown
-
-> "Es un lenguaje de marcado ligero que trata de conseguir la máxima
-legibilidad y 'publicabilidad' usando texto plano."
-
-- <https://es.wikipedia.org/wiki/Markdown>
-
-##  Características principales
-
-- Texto plano
-- Sintaxis sencilla
-- Legibilidad
-- Publicabilidad
-- Exportabiliad
-
-##  Editor online
-
-- <https://jbt.github.io/markdown-editor/>
-
-## Chuleta de Markdown:
-
-- <http://warpedvisions.org/projects/markdown-cheat-sheet>
-
-## Mardownslides
-
-- <https://github.com/asanzdiego/markdownslides>
-
-
-
-# Uso básico de Git
-
-
+- <https://www.syntevo.com/smartgit/>
 
 ## Iinicializar un reposiorio
 
@@ -318,6 +257,14 @@ git checkout nombre-del-fichero
 git log
 ~~~
 
+## Alias
+
+- Podemos crear **alias**.
+
+~~~
+git config --global alias.list 'log --oneline --decorate --graph --all'
+~~~
+
 ## Ignorar archivos
 
 - Podemos ignorar archivos añadiendolos al fichero **.gitignore**.
@@ -339,7 +286,7 @@ git tag -a nombre-etiqueta-anotada -m "mensaje que acompaña a la etiqueta"
 - Se puede crear una etiqueta **conociendo el hash del commit** (verlo con git log).
 
 ~~~
-git tag -a nombre-etiqueta-anotada hash-del-commit
+git tag -a nombre-etiqueta-anotada -m "mensaje que acompaña a la etiqueta" hash-del-commit
 ~~~
 
 ## Ver una etiqueta
@@ -359,20 +306,33 @@ de trabajo una versión que coincida con alguna etiqueta, creando una rama nueva
 git checkout -b nombre-rama nombre-etiqueta
 ~~~
 
-## Alias
-
-- Podemos crear **alias**.
-
-~~~
-git config --global alias.unstage 'reset HEAD --'
-git config --global alias.list 'log --oneline --decorate --graph --all'
-~~~
-
 
 
 # Uso básico de GitHub
 
 
+
+##  Características de GitHub
+
+- **Plataforma de desarrollo colaborativo**, que utiliza Git.
+
+- Los **repositorios son públicos**, salvo con cuenta de pago.
+
+- Tiene facetas de **red social** (perfil público, seguidores, estrellas, etc.)
+
+- Nos permite **gestionar organizaciones y equipos**.
+
+- **Gestión de proyectos** (wiki, releases, incidencias, gráficos, etc.)
+
+- **Servidor web**.
+
+##  Crear cuenta
+
+![Crear cuenta en GitHub](../img/github-signup.png)
+
+##  Crear repositorio
+
+![Crear un repositorio](../img/github-new-repo.png)
 
 ##  Configurar claves (I)
 
@@ -410,76 +370,6 @@ una **clave pública** que es la que tenemos que guardar en nuestra cuenta.
     - Premiar proyectos (start).
     - Forquear proyectos (fork).
     - Crear organizaciones.
-
-
-
-# Sintaxis básica de Markdown
-
-
-
-##  Encabezados (I)
-
-- `<h1>, <h2>, <h3>`
-
-~~~
-# Encabezado de primer nivel
-
-## Encabezado de segundo nivel
-
-##\# Encabezado de tercer nivel
-~~~
-
-##  Encabezados (II)
-
-- Equivalente a lo anterior.
-
-~~~
-Encabezado de primer nivel
-==========================
-
-Encabezado de segundo nivel
----------------------------
-
-##\# Encabezado de tercer nivel ##\#
-~~~
-
-##  Listas no numeradas
-
-- No enumeradas:
-    - se puede usar el menos
-    * se puede usar el asterísico
-    + se puede usar el más
-
-~~~
-- se puede usar el menos
-* se puede usar el asterísico
-+ se puede usar el más
-~~~
-
-##  Listas numeradas
-
-- Enumeradas:
-    1. Primer elemento
-    1. Segundo elemento
-    1. Tercer elemento
-
-~~~
-1. Primer elemento
-1. Segundo elemento
-1. Tercer elemento
-~~~
-
-##  Formato (negrita, cursiva, tachado)
-
-- Texto en cursiva con *un asterisco* o con _un guión bajo_.
-- Texto en negrita con **dos asteriscos** o con __dos guiones bajos__.
-- Texto tachado con ~~dos virgulillas~~.
-
-~~~
-- Texto negrita con **dos asteriscos** o con __dos guiones bajos__.
-- Texto cursiva con *un asterisco* o con _un guión bajo_.
-- Texto tachado con ~~dos virgulillas~~.
-~~~
 
 
 
@@ -535,12 +425,28 @@ git fetch alias-repositorio-remoto
 git pull alias-repositorio-remoto nombre-rama-repositorio-remoto
 ~~~
 
-## Enviar datos
+## Enviar datos (I)
 
 - Podemos **enviar datos al reposiorio remoto** (solo si está up-to-date).
 
 ~~~
 git push alias-repositorio-remoto nombre-rama-repositorio-remoto
+~~~
+
+## Enviar datos (II)
+
+- Normalmente:
+
+~~~
+git push origin master
+~~~
+
+## Enviar datos (III)
+
+- Si queremos subir los tags:
+
+~~~
+git push --tag origin master
 ~~~
 
 ##  Clonar repositorios
@@ -656,7 +562,7 @@ git checkout -b nombre-rama-local alias-repositorio-remoto/nombre-rama-remota
 ~~~
 
 ~~~
-git checkout -track alias-repositorio-remoto/nombre-rama-remota
+git checkout --track alias-repositorio-remoto/nombre-rama-remota
 ~~~
 
 ## Asignar rama remota
@@ -709,6 +615,8 @@ git push alias-repositorio-remoto --delete nombre-rama-remota
 
 - Las personas tendrán los permisos de los equipos a los que pertenezca.
 
+- Los permisos se otorgan a cada repositorio.
+
 ## Forkear proyectos
 
 - Para **participar en un proyecto sin permisos de escritura**, puedes forkearlo.
@@ -760,7 +668,7 @@ usuario.github.io
 organizacion.github.io
 ~~~
 
-## GitHub pages (I)
+## GitHub pages (II)
 
 - También podemos hacer lo mismo con un determinado proyecto **creando una rama gh-pages**.
 
@@ -782,9 +690,100 @@ cuando se lance algún evento (push, pull request, fork, etc.)
 
 
 
-# Sintaxis avanzado de Markdown
+# Markdown
 
 
+
+##  ¿Qué es Markdown?
+
+> "Es un lenguaje de marcado ligero que trata de conseguir la máxima
+legibilidad y 'publicabilidad' usando texto plano."
+
+- <https://es.wikipedia.org/wiki/Markdown>
+
+##  Características principales
+
+- Texto plano
+- Sintaxis sencilla
+- Legibilidad
+- Publicabilidad
+- Exportabiliad
+
+## Mardownslides
+
+- <https://github.com/asanzdiego/markdownslides>
+
+## Chuleta de Markdown:
+
+- <http://warpedvisions.org/projects/markdown-cheat-sheet>
+
+##  Editor online
+
+- <https://jbt.github.io/markdown-editor/>
+
+##  Encabezados (I)
+
+- `<h1>, <h2>, <h3>`
+
+~~~
+# Encabezado de primer nivel
+
+## Encabezado de segundo nivel
+
+##\# Encabezado de tercer nivel
+~~~
+
+##  Encabezados (II)
+
+- Equivalente a lo anterior.
+
+~~~
+Encabezado de primer nivel
+==========================
+
+Encabezado de segundo nivel
+---------------------------
+
+##\# Encabezado de tercer nivel ##\#
+~~~
+
+##  Listas no numeradas
+
+- No enumeradas:
+    - se puede usar el menos
+    * se puede usar el asterísico
+    + se puede usar el más
+
+~~~
+- se puede usar el menos
+* se puede usar el asterísico
++ se puede usar el más
+~~~
+
+##  Listas numeradas
+
+- Enumeradas:
+    1. Primer elemento
+    1. Segundo elemento
+    1. Tercer elemento
+
+~~~
+1. Primer elemento
+1. Segundo elemento
+1. Tercer elemento
+~~~
+
+##  Formato (negrita, cursiva, tachado)
+
+- Texto en cursiva con *un asterisco* o con _un guión bajo_.
+- Texto en negrita con **dos asteriscos** o con __dos guiones bajos__.
+- Texto tachado con ~~dos virgulillas~~.
+
+~~~
+- Texto negrita con **dos asteriscos** o con __dos guiones bajos__.
+- Texto cursiva con *un asterisco* o con _un guión bajo_.
+- Texto tachado con ~~dos virgulillas~~.
+~~~
 
 ## tablas
 
