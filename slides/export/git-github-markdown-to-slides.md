@@ -161,13 +161,9 @@ git config --global user.name "Nombre que quieras mostrar"
 git config --global user.email "correo@electronico.es"
 ~~~
 
-## SmartGit
+## GUIs
 
-- GUI multiplataforma.
-
-- Gratis para uso no comercial.
-
-- <https://www.syntevo.com/smartgit/>
+- <https://git-scm.com/downloads/guis>
 
 ## Iinicializar un reposiorio
 
